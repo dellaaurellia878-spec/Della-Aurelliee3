@@ -1,41 +1,2069 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Della Aurellia ♡ Aurel</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --pink:#e9b8c9;
+    --pink-dark:#c9829c;
+    --lavender:#c9c1df;
+    --lavender-dark:#8f82b4;
+    --cream:#fffafc;
+    --white:#ffffff;
+    --text:#514652;
+    --muted:#8c7e8d;
+    --border:#eadde5;
+    --shadow:0 20px 50px rgba(160,120,145,.13);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(233,184,201,.20),transparent 25%),
+        radial-gradient(circle at 90% 30%,rgba(201,193,223,.22),transparent 28%),
+        var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* DECORATION */
+
+.decor{
+    position:fixed;
+    pointer-events:none;
+    z-index:0;
+    opacity:.45;
+    font-size:22px;
+    animation:float 5s ease-in-out infinite;
+}
+
+.decor.one{
+    top:18%;
+    left:3%;
+}
+
+.decor.two{
+    top:42%;
+    right:4%;
+    animation-delay:1s;
+}
+
+.decor.three{
+    bottom:15%;
+    left:5%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(0);
+    }
+    50%{
+        transform:translateY(-12px) rotate(8deg);
+    }
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(94%,1100px);
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,250,252,.78);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:0 12px 35px rgba(130,100,120,.10);
+    border-radius:30px;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    color:var(--pink-dark);
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:13px;
+    color:var(--muted);
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--pink-dark);
+}
+
+@media(max-width:750px){
+    nav{
+        top:10px;
+        padding:12px 15px;
+    }
+
+    .nav-links{
+        gap:10px;
+        overflow-x:auto;
+        max-width:75%;
+        scrollbar-width:none;
+    }
+
+    .nav-links::-webkit-scrollbar{
+        display:none;
+    }
+
+    .nav-links a{
+        white-space:nowrap;
+        font-size:11px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+}
+
+/* GENERAL */
+
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+}
+
+section{
+    position:relative;
+    z-index:1;
+    padding:100px 0;
+}
+
+.section-head{
+    margin-bottom:45px;
+}
+
+.section-number{
+    color:var(--pink-dark);
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(34px,5vw,54px);
+    font-weight:500;
+    color:var(--text);
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* HOME */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:120px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-small{
+    color:var(--pink-dark);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(48px,8vw,86px);
+    line-height:.98;
+    font-weight:500;
+}
+
+.hero h1 span{
+    color:var(--pink-dark);
+    font-style:italic;
+}
+
+.hero-text{
+    margin-top:25px;
+    max-width:500px;
+    color:var(--muted);
+    line-height:1.9;
+    font-size:15px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    padding:13px 21px;
+    border-radius:30px;
+    border:1px solid var(--border);
+    transition:.3s;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:var(--pink-dark);
+    color:white;
+    border-color:var(--pink-dark);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(201,130,156,.25);
+}
+
+.btn-soft{
+    background:white;
+}
+
+.btn-soft:hover{
+    transform:translateY(-3px);
+}
+
+.hero-photo-wrap{
+    position:relative;
+    width:min(400px,100%);
+    margin:auto;
+}
+
+.hero-photo-wrap::before{
+    content:"";
+    position:absolute;
+    inset:20px -18px -18px 18px;
+    border:1px solid var(--lavender);
+    border-radius:45% 45% 35% 35%;
+    transform:rotate(5deg);
+    z-index:-1;
+}
+
+.hero-photo{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:45% 45% 35% 35%;
+    box-shadow:var(--shadow);
+}
+
+/* PHOTO CLICK */
+
+.clickable-photo{
+    cursor:pointer;
+    transition:.35s;
+}
+
+.clickable-photo:hover{
+    transform:scale(1.02);
+}
+
+/* MUSIC */
+
+.music-section{
+    padding-top:45px;
+    padding-bottom:90px;
+}
+
+.music-player{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:25px;
+    background:rgba(255,255,255,.75);
+    border:1px solid var(--border);
+    border-radius:28px;
+    box-shadow:var(--shadow);
+}
+
+.music-disc{
+    flex:0 0 75px;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:
+        radial-gradient(circle,var(--cream) 0 10%,transparent 11%),
+        repeating-radial-gradient(circle,var(--lavender-dark) 0 3px,#b8afd1 4px 7px);
+    color:white;
+    font-size:27px;
+    box-shadow:0 8px 20px rgba(120,100,150,.20);
+}
+
+.music-disc.playing{
+    animation:spin 3s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.music-info{
+    flex:1;
+}
+
+.music-info small{
+    color:var(--pink-dark);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:10px;
+}
+
+.music-info h3{
+    margin:5px 0;
+    font-family:'Playfair Display',serif;
+    font-size:23px;
+    font-weight:500;
+}
+
+.music-info p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+.music-btn{
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:var(--pink-dark);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.music-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:65px;
+    align-items:center;
+}
+
+.about-photo{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:30px;
+    box-shadow:var(--shadow);
+}
+
+.about-text{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:15px;
+}
+
+.about-text p+p{
+    margin-top:15px;
+}
+
+.highlight{
+    color:var(--pink-dark);
+    font-weight:600;
+}
+
+/* EDUCATION */
+
+.education-card{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.education-card img{
+    width:100%;
+    height:100%;
+    min-height:350px;
+    object-fit:cover;
+}
+
+.education-info{
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.education-info h3{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+.education-info p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.edu-list{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+
+.edu-item{
+    padding:13px 16px;
+    background:#fff8fb;
+    border-radius:15px;
+}
+
+.edu-item span{
+    color:var(--pink-dark);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.edu-item strong{
+    display:block;
+    margin-top:3px;
+    font-size:14px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.skill-card{
+    padding:28px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:25px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.skill-icon{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.skill-card h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.skill-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* HOBBIES */
+
+.hobbies-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.hobby-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(150,110,135,.07);
+    transition:.35s;
+}
+
+.hobby-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.hobby-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.hobby-content{
+    padding:22px;
+}
+
+.hobby-content h3{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    font-weight:500;
+}
+
+.hobby-content p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+    margin-top:8px;
+}
+
+/* PROJECT */
+
+.project-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    min-height:380px;
+    object-fit:cover;
+}
+
+.project-info{
+    padding:45px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.project-tag{
+    font-size:11px;
+    color:var(--pink-dark);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.project-info h3{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.project-info p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* MEMORIES */
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.memory-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    aspect-ratio:1;
+    cursor:pointer;
+}
+
+.memory-item:nth-child(3n+1){
+    aspect-ratio:1/1.18;
+}
+
+.memory-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.memory-item:hover img{
+    transform:scale(1.08);
+}
+
+.memory-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:flex-end;
+    padding:16px;
+    background:linear-gradient(transparent,rgba(50,35,50,.45));
+    opacity:0;
+    transition:.3s;
+}
+
+.memory-item:hover .memory-overlay{
+    opacity:1;
+}
+
+.memory-overlay span{
+    color:white;
+    font-size:12px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:linear-gradient(135deg,#fff,#fff7fb);
+    border:1px solid var(--border);
+    border-radius:35px;
+    padding:55px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.contact-box h2{
+    margin-bottom:15px;
+}
+
+.contact-box > p{
+    color:var(--muted);
+    max-width:550px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.social-btn{
+    padding:12px 20px;
+    border:1px solid var(--border);
+    border-radius:30px;
+    background:white;
+    font-size:13px;
+    transition:.3s;
+}
+
+.social-btn:hover{
+    transform:translateY(-4px);
+    border-color:var(--pink);
+    color:var(--pink-dark);
+}
+
+/* SURPRISE */
+
+.surprise{
+    text-align:center;
+    padding-top:30px;
+    padding-bottom:110px;
+}
+
+.surprise button{
+    border:0;
+    background:var(--lavender-dark);
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.surprise button:hover{
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px 20px 45px;
+    color:var(--muted);
+    font-size:12px;
+}
+
+footer span{
+    color:var(--pink-dark);
+}
+
+/* MODAL FOTO */
+
+.photo-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(35,25,38,.88);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:3000;
+}
+
+.photo-modal.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.photo-modal img{
+    max-width:min(90vw,900px);
+    max-height:85vh;
+    object-fit:contain;
+    border-radius:18px;
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.close-photo{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:38px;
+    cursor:pointer;
+    line-height:1;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:30px;
+    transform:translate(-50%,30px);
+    background:#554957;
+    color:white;
+    padding:13px 20px;
+    border-radius:25px;
+    font-size:13px;
+    opacity:0;
+    pointer-events:none;
+    transition:.35s;
+    z-index:4000;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translate(-50%,0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .education-card,
+    .project-card{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero-grid{
+        gap:45px;
+    }
+
+    .hero-photo-wrap{
+        max-width:320px;
+    }
+
+    .about-photo{
+        max-width:350px;
+        margin:auto;
+    }
+
+    .education-card img,
+    .project-card img{
+        min-height:280px;
+        max-height:400px;
+    }
+
+    .skills-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .memory-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .container{
+        width:88%;
+    }
+
+    .hero h1{
+        font-size:53px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        gap:8px;
+    }
+
+    .btn{
+        padding:11px 16px;
+        font-size:12px;
+    }
+
+    .music-player{
+        padding:18px;
+        gap:14px;
+    }
+
+    .music-disc{
+        width:55px;
+        height:55px;
+        flex-basis:55px;
+        font-size:20px;
+    }
+
+    .music-info h3{
+        font-size:18px;
+    }
+
+    .music-info p{
+        font-size:10px;
+    }
+
+    .music-btn{
+        width:42px;
+        height:42px;
+    }
+
+    .skills-grid,
+    .hobbies-grid{
+        grid-template-columns:1fr;
+    }
+
+    .memory-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .memory-item:nth-child(3n+1){
+        aspect-ratio:1;
+    }
+
+    .education-info,
+    .project-info{
+        padding:28px;
+    }
+
+    .education-info h3{
+        font-size:27px;
+    }
+
+    .project-info h3{
+        font-size:32px;
+    }
+
+    .contact-box{
+        padding:35px 20px;
+    }
+
+    h2{
+        font-size:38px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- DECORATIONS -->
+
+<div class="decor one">✿</div>
+<div class="decor two">♡</div>
+<div class="decor three">✦</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <a href="#home" class="logo">Aurelliee ♡</a>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projects">Projects</a>
+        <a href="#memories">Memories</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+
 <!-- HOME -->
+
 <section class="hero" id="home">
-    ...
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div class="hero-content reveal">
+
+                <div class="hero-small">
+                    welcome to my little corner ♡
+                </div>
+
+                <h1>
+                    Hi, I'm
+                    <span>Aurel</span>
+                    ♡
+                </h1>
+
+                <p class="hero-text">
+                    Haiii! Aku Della Aurellia, tapi kamu bisa panggil aku Aurel.
+                    Aku adalah pelajar dari SMKN 42 Jakarta yang sedang belajar,
+                    berkarya, dan menikmati hal-hal kecil dalam hidup.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn btn-primary">
+                        About Me ♡
+                    </a>
+
+                    <a href="#memories" class="btn btn-soft">
+                        My Memories
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-photo-wrap reveal">
+
+                <img
+                    src="profil.jpg"
+                    alt="Foto profil Aurel"
+                    class="hero-photo clickable-photo"
+                    onclick="openPhoto(this.src)"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
 
 <!-- MUSIC -->
-<section class="music-section">
-<div class="container">
 
-    <div class="section-head reveal">
-        <div class="section-number">07 — currently playing</div>
-        <h2>A Little Music</h2>
-    </div>
+<section class="music-section" id="music">
 
-    <div class="music-player reveal">
+    <div class="container">
 
-        <div class="music-disc" id="disc">
-            ♫
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                02 — currently playing
+            </div>
+
+            <h2>A Little Music</h2>
+
         </div>
 
-        <div class="music-info">
-            <small>my little soundtrack</small>
-            <h3>Hate That I Made You Love Me</h3>
-            <p>tap play and let the music stay ♡</p>
+
+        <div class="music-player reveal">
+
+            <div class="music-disc" id="disc">
+                ♫
+            </div>
+
+
+            <div class="music-info">
+
+                <small>
+                    my little soundtrack
+                </small>
+
+                <h3>
+                    Hate That I Made You Love Me
+                </h3>
+
+                <p>
+                    tap play and let the music stay ♡
+                </p>
+
+            </div>
+
+
+            <button
+                class="music-btn"
+                id="musicBtn"
+                aria-label="Play music"
+            >
+                ▶
+            </button>
+
         </div>
 
-        <button class="music-btn" id="musicBtn" aria-label="Play music">
-            ▶
-        </button>
+
+        <audio id="audio">
+
+            <source
+                src="hate that i made you love me mp3.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
 
     </div>
 
-    <audio id="audio">
-        <source src="hate that i made you love me mp3.mp3" type="audio/mpeg">
-    </audio>
-
-</div>
 </section>
 
+
 <!-- ABOUT -->
+
 <section id="about">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                03 — a little about me
+            </div>
+
+            <h2>Little About Me</h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="reveal">
+
+                <img
+                    src="foto profil hero.jpeg"
+                    alt="Aurel"
+                    class="about-photo clickable-photo"
+                    onclick="openPhoto(this.src)"
+                >
+
+            </div>
+
+
+            <div class="about-text reveal">
+
+                <p>
+                    Haiii! Aku <span class="highlight">Aurel ♡</span>,
+                    atau Della Aurellia.
+                </p>
+
+                <p>
+                    Aku adalah pelajar dari
+                    <span class="highlight">SMKN 42 Jakarta</span>,
+                    alias anak 42 ✨
+                </p>
+
+                <p>
+                    Aku suka menulis, bernyanyi, dan menonton.
+                    Aku juga senang mencoba hal-hal baru dan belajar
+                    memahami diri sendiri sedikit demi sedikit.
+                </p>
+
+                <p>
+                    Website kecil ini aku buat sebagai tempat untuk
+                    menyimpan cerita, hal-hal yang aku suka, karya,
+                    dan beberapa memories yang ingin aku simpan dekat.
+                </p>
+
+                <p>
+                    Small things that make me happy:
+                    <span class="highlight">dihargai ♡</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                04 — my journey
+            </div>
+
+            <h2>Education</h2>
+
+        </div>
+
+
+        <div class="education-card reveal">
+
+            <img
+                src="smkn 42.jpeg"
+                alt="SMKN 42 Jakarta"
+                class="clickable-photo"
+                onclick="openPhoto(this.src)"
+            >
+
+
+            <div class="education-info">
+
+                <h3>
+                    SMK Negeri 42 Jakarta
+                </h3>
+
+                <p>
+                    Tempat aku belajar, berkembang,
+                    dan menjalani perjalanan sebagai pelajar.
+                </p>
+
+
+                <div class="edu-list">
+
+                    <div class="edu-item">
+
+                        <span>
+                            Started
+                        </span>
+
+                        <strong>
+                            2026
+                        </strong>
+
+                    </div>
+
+
+                    <div class="edu-item">
+
+                        <span>
+                            Major
+                        </span>
+
+                        <strong>
+                            Manajemen Perkantoran
+                        </strong>
+
+                    </div>
+
+
+                    <div class="edu-item">
+
+                        <span>
+                            Class
+                        </span>
+
+                        <strong>
+                            X MP 1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                05 — things I can do
+            </div>
+
+            <h2>My Skills</h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ✍🏻
+                </div>
+
+                <h3>
+                    Writing
+                </h3>
+
+                <p>
+                    Menulis cerita, ide, dan menuangkan
+                    pikiran lewat kata-kata.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Canva & Design
+                </h3>
+
+                <p>
+                    Membuat desain sederhana yang
+                    sesuai dengan mood dan kebutuhan.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    HTML & CSS
+                </h3>
+
+                <p>
+                    Belajar membuat website dan
+                    memahami dasar-dasar coding.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Singing
+                </h3>
+
+                <p>
+                    Salah satu hal yang aku suka lakukan
+                    ketika sedang menikmati waktu sendiri.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ✂️
+                </div>
+
+                <h3>
+                    Editing
+                </h3>
+
+                <p>
+                    Senang mencoba mengedit foto,
+                    video, dan berbagai visual sederhana.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    💬
+                </div>
+
+                <h3>
+                    Public Speaking
+                </h3>
+
+                <p>
+                    Terus belajar agar lebih percaya diri
+                    ketika berbicara di depan orang lain.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOBBIES -->
+
+<section id="hobbies">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                06 — things I love
+            </div>
+
+            <h2>My Hobbies</h2>
+
+        </div>
+
+
+        <div class="hobbies-grid">
+
+
+            <div class="hobby-card reveal">
+
+                <img
+                    src="karya.png"
+                    alt="Writing"
+                    class="clickable-photo"
+                    onclick="openPhoto(this.src)"
+                >
+
+                <div class="hobby-content">
+
+                    <h3>
+                        Writing ✍🏻
+                    </h3>
+
+                    <p>
+                        Menulis menjadi salah satu cara
+                        untuk menuangkan apa yang ada di pikiran.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="hobby-card reveal">
+
+                <div
+                    style="
+                    height:240px;
+                    display:grid;
+                    place-items:center;
+                    background:linear-gradient(135deg,#f8e6ed,#eeeafa);
+                    font-size:70px;
+                    "
+                >
+                    🎤
+                </div>
+
+                <div class="hobby-content">
+
+                    <h3>
+                        Singing 🎶
+                    </h3>
+
+                    <p>
+                        Bernyanyi dan menikmati musik
+                        adalah salah satu hal kecil yang menyenangkan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="hobby-card reveal">
+
+                <div
+                    style="
+                    height:240px;
+                    display:grid;
+                    place-items:center;
+                    background:linear-gradient(135deg,#eeeafa,#f8e6ed);
+                    font-size:70px;
+                    "
+                >
+                    🎬
+                </div>
+
+                <div class="hobby-content">
+
+                    <h3>
+                        Watching 🎬
+                    </h3>
+
+                    <p>
+                        Menonton film atau sesuatu yang menarik
+                        untuk menemani waktu santai.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                07 — something I made
+            </div>
+
+            <h2>My Project</h2>
+
+        </div>
+
+
+        <div class="project-card reveal">
+
+            <img
+                src="karya.png"
+                alt="Project Aurelliee"
+                class="clickable-photo"
+                onclick="openPhoto(this.src)"
+            >
+
+
+            <div class="project-info">
+
+                <div class="project-tag">
+                    personal website
+                </div>
+
+                <h3>
+                    Aurelliee
+                </h3>
+
+                <p>
+                    Website personal yang aku buat sebagai
+                    tempat untuk memperkenalkan diri,
+                    menyimpan karya, hobbies, dan memories.
+                </p>
+
+                <div style="margin-top:25px;">
+
+                    <a
+                        href="#home"
+                        class="btn btn-primary"
+                    >
+                        Explore Again ♡
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section id="memories">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-number">
+                08 — little moments
+            </div>
+
+            <h2>My Memories</h2>
+
+        </div>
+
+
+        <div class="memory-grid">
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/1.jpg" alt="Memory 1">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/2.jpg" alt="Memory 2">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/3.jpg" alt="Memory 3">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/4.jpg" alt="Memory 4">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/5.jpg" alt="Memory 5">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/6.jpg" alt="Memory 6">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/7.jpg" alt="Memory 7">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/8.jpg" alt="Memory 8">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/9.jpg" alt="Memory 9">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reveal"
+                 onclick="openPhoto(this.querySelector('img').src)">
+
+                <img src="memories/10.jpg" alt="Memory 10">
+
+                <div class="memory-overlay">
+                    <span>little moment ♡</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="section-number">
+                09 — let's connect
+            </div>
+
+            <h2>
+                Dear Visitor ♡
+            </h2>
+
+            <p>
+                Makasih sudah mampir ke little corner milikku.
+                Kalau mau lihat keseharianku atau karya lainnya,
+                kamu bisa menemukan aku di sini.
+            </p>
+
+
+            <div class="socials">
+
+                <a
+                    href="https://www.instagram.com/bbvterfliee._/"
+                    target="_blank"
+                    class="social-btn"
+                >
+                    Instagram ♡
+                </a>
+
+
+                <a
+                    href="https://www.tiktok.com/@aurelliaaaaaaa._"
+                    target="_blank"
+                    class="social-btn"
+                >
+                    TikTok ♪
+                </a>
+
+
+                <a
+                    href="mailto:aurellia@example.com"
+                    class="social-btn"
+                >
+                    Email ✉
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SURPRISE -->
+
+<section class="surprise">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <p
+                style="
+                color:var(--muted);
+                margin-bottom:15px;
+                "
+            >
+                psst... there's a little surprise here ♡
+            </p>
+
+            <button onclick="surpriseMessage()">
+                Open Surprise ✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    made with ♡ by
+    <span>Della Aurellia — Aurel</span>
+
+</footer>
+
+
+<!-- PHOTO MODAL -->
+
+<div
+    class="photo-modal"
+    id="photoModal"
+    onclick="closePhoto()"
+>
+
+    <span
+        class="close-photo"
+        onclick="closePhoto()"
+    >
+        &times;
+    </span>
+
+    <img
+        id="photoModalImg"
+        src=""
+        alt="Photo preview"
+        onclick="event.stopPropagation()"
+    >
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast"
+>
+</div>
+
+
+<script>
+
+/* =========================
+   MUSIC
+========================= */
+
+const audio = document.getElementById("audio");
+const musicBtn = document.getElementById("musicBtn");
+const disc = document.getElementById("disc");
+
+musicBtn.addEventListener("click", function(){
+
+    if(audio.paused){
+
+        audio.play()
+        .then(function(){
+
+            musicBtn.textContent = "❚❚";
+            disc.classList.add("playing");
+
+        })
+        .catch(function(){
+
+            showToast(
+                "Musiknya belum bisa diputar ♡ Pastikan file MP3 ada di repository."
+            );
+
+        });
+
+    }else{
+
+        audio.pause();
+
+        musicBtn.textContent = "▶";
+
+        disc.classList.remove("playing");
+
+    }
+
+});
+
+
+audio.addEventListener("ended", function(){
+
+    musicBtn.textContent = "▶";
+
+    disc.classList.remove("playing");
+
+});
+
+
+/* =========================
+   PHOTO MODAL
+========================= */
+
+function openPhoto(src){
+
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("photoModalImg");
+
+    modalImg.src = src;
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closePhoto(){
+
+    const modal = document.getElementById("photoModal");
+
+    modal.classList.remove("show");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================
+   ESC CLOSE PHOTO
+========================= */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closePhoto();
+
+    }
+
+});
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+    function(entries){
+
+        entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+    {
+        threshold:0.12
+    }
+);
+
+
+reveals.forEach(function(element){
+
+    observer.observe(element);
+
+});
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+function surpriseMessage(){
+
+    showToast(
+        "You made it this far! Makasih sudah berkunjung ♡ ✨"
+    );
+
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(message){
+
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },3500);
+
+}
+
+
+/* =========================
+   SPARKLE CLICK
+========================= */
+
+document.addEventListener("click", function(event){
+
+    const sparkle = document.createElement("span");
+
+    sparkle.textContent = "✦";
+
+    sparkle.style.position = "fixed";
+    sparkle.style.left = event.clientX + "px";
+    sparkle.style.top = event.clientY + "px";
+    sparkle.style.pointerEvents = "none";
+    sparkle.style.zIndex = "5000";
+    sparkle.style.color = "#c9829c";
+    sparkle.style.fontSize = "14px";
+    sparkle.style.transition = "all .7s ease";
+
+    document.body.appendChild(sparkle);
+
+
+    setTimeout(function(){
+
+        sparkle.style.transform =
+            "translateY(-25px) scale(1.5)";
+
+        sparkle.style.opacity = "0";
+
+    },20);
+
+
+    setTimeout(function(){
+
+        sparkle.remove();
+
+    },750);
+
+});
+
+</script>
+
+</body>
+</html>
