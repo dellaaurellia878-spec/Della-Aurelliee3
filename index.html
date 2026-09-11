@@ -6,13 +6,11 @@
 
 <title>Della Aurellia | Aurel ♡</title>
 
-<!-- GOOGLE FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -51,9 +49,7 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
-   FLOATING DECORATION
-========================= */
+/* FLOATING DECORATION */
 
 .flower{
     position:fixed;
@@ -94,14 +90,13 @@ body{
     0%,100%{
         transform:translateY(0) rotate(0deg);
     }
+
     50%{
         transform:translateY(-18px) rotate(8deg);
     }
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
     position:fixed;
@@ -188,9 +183,7 @@ body{
     background:#f7dce7;
 }
 
-/* =========================
-   GENERAL
-========================= */
+/* GENERAL */
 
 section{
     width:min(1120px,calc(100% - 34px));
@@ -229,9 +222,7 @@ section{
     color:#a87587;
 }
 
-/* =========================
-   HOME
-========================= */
+/* HOME */
 
 #home{
     min-height:100vh;
@@ -405,9 +396,7 @@ section{
     color:#b27288;
 }
 
-/* =========================
-   MUSIC
-========================= */
+/* MUSIC */
 
 .music-card{
     margin-top:35px;
@@ -469,9 +458,7 @@ audio{
     height:34px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about-layout{
     display:grid;
@@ -560,9 +547,7 @@ audio{
     font-size:20px;
 }
 
-/* =========================
-   EDUCATION
-========================= */
+/* EDUCATION */
 
 .education-card{
     margin-top:40px;
@@ -604,121 +589,107 @@ audio{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:15px;
+}
+
+.education-year{
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#c28aa0;
+    margin-bottom:10px;
+}
+
+.education-content h3{
+    font-family:'DM Serif Display',serif;
+    font-size:38px;
+    color:#bd7892;
+    margin-bottom:14px;
+}
+
+.education-content p{
+    font-size:13px;
+    line-height:2;
+    color:#a87587;
 }
 
 .education-tag{
     display:inline-block;
     width:max-content;
 
-    padding:7px 12px;
-    border-radius:20px;
+    margin-top:20px;
+    padding:9px 14px;
 
-    background:#f4dbe4;
-    color:#b87289;
+    background:#f5d6e1;
+    color:#b86f89;
+
+    border-radius:13px;
 
     font-size:10px;
     letter-spacing:1px;
-    margin-bottom:15px;
 }
 
-.education-content h3{
-    font-family:'DM Serif Display',serif;
-    font-size:38px;
-    color:#c17a94;
-    margin-bottom:12px;
-}
-
-.education-content p{
-    font-size:14px;
-    line-height:1.9;
-    color:#a77386;
-}
-
-.edu-details{
-    margin-top:22px;
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.edu-details span{
-    padding:9px 12px;
-    border-radius:14px;
-    background:#fff0e7;
-    color:#b87a8e;
-    font-size:11px;
-}
-
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 
 .skills-grid{
-    margin-top:42px;
+    margin-top:40px;
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
 .skill-card{
-    padding:25px;
+    padding:25px 20px;
 
-    min-height:175px;
+    min-height:170px;
 
-    background:rgba(255,250,244,.65);
-    border:1px solid rgba(215,155,177,.18);
+    background:rgba(255,250,244,.6);
 
+    border:1px solid rgba(255,255,255,.85);
     border-radius:24px;
 
-    transition:.35s;
+    box-shadow:0 15px 40px rgba(184,111,141,.08);
 
-    position:relative;
-    overflow:hidden;
-}
-
-.skill-card::after{
-    content:"✿";
-    position:absolute;
-    right:-5px;
-    bottom:-15px;
-
-    font-size:70px;
-
-    color:rgba(221,161,182,.12);
+    transition:.4s;
 }
 
 .skill-card:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow);
+    transform:translateY(-8px);
 }
 
 .skill-icon{
-    font-size:25px;
-    color:#c27b96;
-    margin-bottom:13px;
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#f5d6e1;
+    color:#b86f89;
+
+    margin-bottom:18px;
 }
 
 .skill-card h3{
     font-family:'Cormorant Garamond',serif;
-    font-size:25px;
-    color:#b96f89;
+    font-size:22px;
+    color:#b86f89;
+    margin-bottom:7px;
 }
 
 .skill-card p{
     font-size:11px;
-    line-height:1.7;
-    color:#ad7c8d;
-    margin-top:4px;
+    line-height:1.8;
+    color:#ad7b8c;
 }
 
-/* =========================
-   HOBBIES
-========================= */
+/* HOBBIES */
 
-.hobby-grid{
-    margin-top:42px;
+.hobbies-grid{
+    margin-top:40px;
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -727,85 +698,79 @@ audio{
 
 .hobby-card{
     position:relative;
-    height:410px;
     overflow:hidden;
 
-    border-radius:30px;
+    border-radius:27px;
+
+    background:rgba(255,250,244,.65);
+    border:1px solid rgba(255,255,255,.8);
 
     box-shadow:var(--shadow);
 
-    background:#f5dce5;
+    transition:.4s;
 }
 
-.hobby-card img{
+.hobby-card:hover{
+    transform:translateY(-8px);
+}
+
+.hobby-image{
+    height:300px;
+    overflow:hidden;
+}
+
+.hobby-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     transition:.6s;
 }
 
-.hobby-card:hover img{
-    transform:scale(1.08);
-}
-
-.hobby-card::after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
-        to top,
-        rgba(119,63,82,.7),
-        transparent 55%
-    );
+.hobby-card:hover .hobby-image img{
+    transform:scale(1.06);
 }
 
 .hobby-info{
-    position:absolute;
-    z-index:2;
-    bottom:23px;
-    left:24px;
+    padding:19px 20px 22px;
 }
 
 .hobby-info small{
     font-size:9px;
-    text-transform:uppercase;
     letter-spacing:2px;
-    color:#ffe9ee;
+    color:#c38ca0;
 }
 
 .hobby-info h3{
-    font-family:'DM Serif Display',serif;
-    font-size:31px;
-    color:#fff3e8;
+    margin-top:5px;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+    color:#b96f89;
 }
 
-/* =========================
-   PROJECT
-========================= */
+/* PROJECT */
 
 .project-card{
-    margin-top:42px;
+    margin-top:40px;
 
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:1.05fr .95fr;
     gap:35px;
 
     padding:25px;
 
-    background:rgba(255,249,242,.7);
+    border-radius:31px;
 
-    border-radius:32px;
-
+    background:rgba(255,250,243,.65);
     border:1px solid rgba(255,255,255,.8);
 
     box-shadow:var(--shadow);
 }
 
 .project-image{
-    height:390px;
+    min-height:370px;
     overflow:hidden;
-    border-radius:25px;
+    border-radius:24px;
 }
 
 .project-image img{
@@ -823,45 +788,44 @@ audio{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:15px;
 }
 
 .project-number{
     font-size:10px;
     letter-spacing:3px;
-    color:#c18a9d;
-    margin-bottom:12px;
+    color:#c18aa0;
+    margin-bottom:10px;
 }
 
 .project-content h3{
     font-family:'DM Serif Display',serif;
-    font-size:43px;
-    color:#c07893;
-    margin-bottom:14px;
+    font-size:40px;
+    color:#bd7892;
+    margin-bottom:15px;
 }
 
 .project-content p{
     font-size:13px;
-    line-height:1.9;
-    color:#a87386;
-    margin-bottom:24px;
+    line-height:2;
+    color:#a87587;
 }
 
 .project-button{
-    width:max-content;
-
     display:inline-flex;
     align-items:center;
     gap:8px;
 
-    padding:13px 18px;
+    width:max-content;
+
+    margin-top:25px;
+    padding:12px 17px;
 
     border-radius:15px;
 
-    background:#cf8da5;
-    color:#fff7ed;
-
     text-decoration:none;
+
+    background:#f4d4df;
+    color:#b66e87;
 
     font-size:11px;
     font-weight:600;
@@ -870,16 +834,13 @@ audio{
 }
 
 .project-button:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(184,111,141,.2);
+    transform:translateY(-3px);
 }
 
-/* =========================
-   MEMORIES
-========================= */
+/* MEMORIES */
 
 .memories-grid{
-    margin-top:42px;
+    margin-top:40px;
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -887,93 +848,70 @@ audio{
 }
 
 .memory{
+    height:270px;
     overflow:hidden;
-    position:relative;
 
-    border-radius:21px;
+    border-radius:22px;
 
-    border:4px solid rgba(255,249,241,.75);
+    border:5px solid rgba(255,249,241,.72);
 
-    box-shadow:0 10px 30px rgba(184,111,141,.11);
+    box-shadow:0 14px 35px rgba(184,111,141,.12);
 
     cursor:pointer;
+
+    transition:.4s;
 }
 
-.memory:nth-child(3n+1){
-    transform:rotate(-1.2deg);
+.memory:nth-child(2),
+.memory:nth-child(5),
+.memory:nth-child(8){
+    transform:translateY(25px);
 }
 
-.memory:nth-child(3n+2){
-    transform:rotate(1deg);
+.memory:hover{
+    transform:translateY(-6px) rotate(-1deg);
 }
 
-.memory:nth-child(3n){
-    transform:rotate(-.5deg);
+.memory:nth-child(2):hover,
+.memory:nth-child(5):hover,
+.memory:nth-child(8):hover{
+    transform:translateY(17px) rotate(1deg);
 }
 
 .memory img{
-    display:block;
-
     width:100%;
-    height:220px;
-
+    height:100%;
     object-fit:cover;
 
-    transition:.5s;
+    transition:.6s;
 }
 
 .memory:hover img{
-    transform:scale(1.07);
+    transform:scale(1.08);
 }
 
-.memory::after{
-    content:"♡";
-    position:absolute;
-    top:10px;
-    right:11px;
-
-    width:25px;
-    height:25px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:rgba(255,248,239,.75);
-
-    color:#c27b95;
-
-    font-size:12px;
-}
-
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact-box{
-    margin-top:42px;
-
-    padding:40px;
+    padding:55px;
 
     text-align:center;
+
+    border-radius:35px;
 
     background:rgba(255,249,242,.68);
     backdrop-filter:blur(18px);
 
-    border-radius:32px;
-
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid rgba(255,255,255,.9);
 
     box-shadow:var(--shadow);
 }
 
 .contact-box h3{
     font-family:'DM Serif Display',serif;
-    font-size:39px;
-    color:#c07994;
-    margin-bottom:10px;
+    font-size:48px;
+    color:#bd7892;
+    margin-bottom:14px;
 }
 
 .contact-box p{
@@ -981,55 +919,45 @@ audio{
     margin:auto;
 
     font-size:13px;
-    line-height:1.9;
-
-    color:#aa7789;
+    line-height:2;
+    color:#a87587;
 }
 
 .social-list{
-    margin-top:28px;
+    margin-top:25px;
 
     display:flex;
     justify-content:center;
     gap:12px;
-    flex-wrap:wrap;
 }
 
 .social{
-    width:53px;
-    height:53px;
+    width:50px;
+    height:50px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:17px;
+    border-radius:18px;
+
+    background:#f5d7e1;
+    color:#b66e88;
 
     text-decoration:none;
-
-    font-size:19px;
-
-    color:#b86e88;
-
-    background:#f8dfe8;
-
-    border:1px solid rgba(203,139,162,.18);
 
     transition:.35s;
 }
 
 .social:hover{
-    transform:translateY(-6px) rotate(-5deg);
-    background:#efd0dc;
-    box-shadow:0 10px 25px rgba(184,111,141,.15);
+    transform:translateY(-5px) rotate(4deg);
+    background:#edc2d2;
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
+/* TESTIMONIALS */
 
 .testimonials{
-    margin-top:45px;
+    margin-top:40px;
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -1037,178 +965,124 @@ audio{
 }
 
 .testimonial{
-    position:relative;
-
     padding:27px;
 
-    min-height:220px;
+    background:rgba(255,250,244,.63);
 
-    background:rgba(255,249,242,.7);
-
-    border:1px solid rgba(216,155,177,.18);
-
+    border:1px solid rgba(255,255,255,.85);
     border-radius:25px;
 
-    box-shadow:0 12px 35px rgba(184,111,141,.08);
-
-    transition:.35s;
-}
-
-.testimonial:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow);
+    box-shadow:0 15px 40px rgba(184,111,141,.08);
 }
 
 .quote{
     font-family:'DM Serif Display',serif;
-    font-size:43px;
-    line-height:.7;
-
-    color:#e0a9bb;
-    margin-bottom:15px;
+    font-size:50px;
+    line-height:.5;
+    color:#e0a9bc;
+    margin-bottom:18px;
 }
 
 .testimonial p{
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:18px;
-    line-height:1.45;
-
-    color:#a66f82;
-
-    margin-bottom:20px;
+    font-size:12px;
+    line-height:1.9;
+    color:#a87587;
 }
 
 .testimonial-name{
-    font-size:10px;
-    letter-spacing:1px;
-    text-transform:uppercase;
+    margin-top:16px;
 
-    color:#c08ba0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    font-weight:700;
+
+    color:#b86f89;
 }
 
-/* =========================
-   FINAL MESSAGE
-========================= */
+/* FINAL */
 
 .final-section{
-    text-align:center;
-    padding-bottom:80px;
+    padding-top:30px;
+    padding-bottom:90px;
 }
 
 .final-card{
-    padding:55px 25px;
+    padding:60px 30px;
 
-    border-radius:40px;
+    text-align:center;
+
+    border-radius:35px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(250,221,231,.8),
-            rgba(255,241,226,.8)
-        );
+        radial-gradient(circle at 50% 0%,rgba(248,212,225,.8),transparent 55%),
+        rgba(255,249,242,.75);
 
-    border:1px solid rgba(255,255,255,.85);
+    border:1px solid rgba(255,255,255,.9);
 
     box-shadow:var(--shadow);
-
-    position:relative;
-    overflow:hidden;
-}
-
-.final-card::before{
-    content:"✿";
-    position:absolute;
-    top:-35px;
-    left:30px;
-    font-size:100px;
-    color:rgba(255,255,255,.45);
-}
-
-.final-card::after{
-    content:"♡";
-    position:absolute;
-    right:30px;
-    bottom:-55px;
-    font-size:130px;
-    color:rgba(255,255,255,.45);
 }
 
 .final-card h2{
-    position:relative;
-    z-index:2;
-
     font-family:'DM Serif Display',serif;
-    font-size:45px;
-
-    color:#c27b96;
-
-    margin-bottom:10px;
+    font-size:48px;
+    color:#bd7892;
+    margin-bottom:15px;
 }
 
 .final-card p{
-    position:relative;
-    z-index:2;
-
-    max-width:560px;
-    margin:0 auto 27px;
+    max-width:650px;
+    margin:auto;
 
     font-size:13px;
-    line-height:1.9;
-
-    color:#aa7788;
+    line-height:2;
+    color:#a87587;
 }
 
 .message-button{
-    position:relative;
-    z-index:3;
+    margin-top:25px;
 
-    border:none;
-    cursor:pointer;
+    border:0;
 
-    padding:15px 24px;
+    padding:14px 21px;
 
-    border-radius:18px;
+    border-radius:17px;
+
+    background:linear-gradient(135deg,#ce8da5,#ba728e);
+    color:white;
 
     font-family:'Poppins',sans-serif;
     font-size:12px;
     font-weight:600;
 
-    background:#c98099;
-    color:#fff8ee;
+    cursor:pointer;
 
     box-shadow:0 12px 25px rgba(184,111,141,.2);
 
-    transition:.3s;
+    transition:.35s;
 }
 
 .message-button:hover{
-    transform:translateY(-4px) scale(1.02);
+    transform:translateY(-4px);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
+    padding:35px 20px 45px;
+
     text-align:center;
 
-    padding:25px 20px 35px;
+    font-size:11px;
+    letter-spacing:1px;
 
-    color:#bd879a;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:17px;
+    color:#bc8297;
 }
 
 footer span{
-    color:#d291a8;
+    color:#d795ad;
 }
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+/* REVEAL */
 
 .reveal{
     opacity:0;
@@ -1221,49 +1095,40 @@ footer span{
     transform:translateY(0);
 }
 
-/* =========================
-   EMOJI BURST
-========================= */
+/* BURST */
 
 .burst{
     position:fixed;
-
-    left:0;
-    top:0;
+    z-index:9999;
 
     pointer-events:none;
 
-    z-index:9999;
+    font-size:20px;
 
-    font-size:25px;
-
-    animation:explode 1s ease-out forwards;
+    animation:burstAnimation 1s ease-out forwards;
 }
 
-@keyframes explode{
+@keyframes burstAnimation{
 
     0%{
         opacity:1;
-        transform:
-            translate(0,0)
-            scale(.4)
-            rotate(0deg);
+        transform:translate(-50%,-50%) scale(.5) rotate(0deg);
     }
 
     100%{
         opacity:0;
-
         transform:
-            translate(var(--x),var(--y))
-            scale(1.35)
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(1.3)
             rotate(var(--rotate));
     }
 
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -1281,22 +1146,18 @@ footer span{
         gap:55px;
     }
 
+    .hero-buttons{
+        justify-content:center;
+    }
+
     .hero-subtitle{
         margin-left:auto;
         margin-right:auto;
     }
 
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .hero-photo-area{
-        order:-1;
-    }
-
     .hero-photo-frame{
-        width:285px;
-        height:370px;
+        width:310px;
+        height:410px;
     }
 
     .photo-label{
@@ -1305,14 +1166,12 @@ footer span{
 
     .about-layout{
         grid-template-columns:1fr;
+        gap:50px;
     }
 
     .about-image{
-        text-align:center;
-    }
-
-    .about-image img{
-        height:430px;
+        display:flex;
+        justify-content:center;
     }
 
     .education-card,
@@ -1324,12 +1183,8 @@ footer span{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .hobby-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hobby-card{
-        height:390px;
+    .hobbies-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .memories-grid{
@@ -1337,7 +1192,7 @@ footer span{
     }
 
     .testimonials{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr 1fr;
     }
 
 }
@@ -1345,96 +1200,68 @@ footer span{
 @media(max-width:600px){
 
     section{
-        width:min(100% - 24px,520px);
         padding:80px 0;
     }
 
-    .navbar{
-        width:calc(100% - 18px);
-        top:9px;
-        border-radius:19px;
-    }
-
-    .logo{
-        font-size:21px;
-    }
-
-    .nav-icons a{
-        width:31px;
-        height:31px;
-        font-size:12px;
+    #home{
+        padding-top:130px;
     }
 
     .hero-title{
-        font-size:63px;
-    }
-
-    .hero-title .script{
-        margin-left:0;
+        font-size:64px;
     }
 
     .hero-photo-frame{
-        width:255px;
-        height:335px;
+        width:270px;
+        height:360px;
     }
 
-    .music-card{
-        align-items:flex-start;
-        flex-direction:column;
+    .section-title{
+        font-size:48px;
     }
 
     .about-highlight{
         grid-template-columns:1fr;
     }
 
-    .education-card{
-        padding:15px;
-    }
-
-    .education-image{
-        height:260px;
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr;
-    }
-
-    .project-card{
-        padding:15px;
-    }
-
-    .project-image{
-        height:280px;
-    }
-
-    .memories-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:9px;
-    }
-
-    .memory{
-        border-width:3px;
-        border-radius:15px;
-    }
-
-    .memory img{
-        height:170px;
-    }
-
+    .skills-grid,
+    .hobbies-grid,
+    .memories-grid,
     .testimonials{
         grid-template-columns:1fr;
     }
 
+    .memory{
+        height:350px;
+    }
+
+    .memory:nth-child(2),
+    .memory:nth-child(5),
+    .memory:nth-child(8){
+        transform:none;
+    }
+
+    .memory:nth-child(2):hover,
+    .memory:nth-child(5):hover,
+    .memory:nth-child(8):hover{
+        transform:translateY(-6px) rotate(1deg);
+    }
+
     .contact-box{
-        padding:30px 18px;
+        padding:40px 20px;
     }
 
-    .final-card{
-        padding:45px 18px;
-    }
-
+    .contact-box h3,
     .final-card h2{
-        font-size:37px;
+        font-size:40px;
+    }
+
+    .education-image{
+        height:270px;
+    }
+
+    .project-image{
+        min-height:250px;
     }
 
 }
@@ -1446,15 +1273,13 @@ footer span{
 
 <!-- FLOATING DECORATIONS -->
 
-<div class="flower">🌸</div>
 <div class="flower">✿</div>
-<div class="flower">🌷</div>
 <div class="flower">♡</div>
+<div class="flower">✦</div>
+<div class="flower">🌷</div>
 
 
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -1463,30 +1288,49 @@ footer span{
 </a>
 
 <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#hobbies">Hobbies</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#memories">Memories</a></li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#education">Education</a>
+</li>
+
+<li>
+<a href="#skills">Skills</a>
+</li>
+
+<li>
+<a href="#hobbies">Hobbies</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
+</li>
+
+<li>
+<a href="#memories">Memories</a>
+</li>
+
 </ul>
 
 <div class="nav-icons">
 
-<a href="https://www.instagram.com/bbvterfliee._/" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
+<a
+href="https://www.instagram.com/bbvterfliee._/"
+target="_blank"
+title="Instagram"
+>
+<i class="fa-brands fa-instagram"></i>
 </a>
 
-<a href="https://www.tiktok.com/@aurelliaaaaaaa._" target="_blank">
-    <i class="fa-brands fa-tiktok"></i>
-</a>
-
-<a href="https://wa.me/6285709980651" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<a href="mailto:dellaaurellia878@gmail.com">
-    <i class="fa-solid fa-envelope"></i>
+<a
+href="https://www.tiktok.com/@aurelliaaaaaaa._"
+target="_blank"
+title="TikTok"
+>
+<i class="fa-brands fa-tiktok"></i>
 </a>
 
 </div>
@@ -1494,9 +1338,7 @@ footer span{
 </nav>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- HOME -->
 
 <section id="home">
 
@@ -1504,30 +1346,40 @@ footer span{
 
 <div class="hero-badge">
     <i class="fa-solid fa-sparkles"></i>
-    PERSONAL PORTFOLIO · 2026
+    PERSONAL PORTFOLIO
 </div>
 
 <h1 class="hero-title">
     Della
-    <span class="script">Aurellia.</span>
+    <span class="script">
+        Aurellia ♡
+    </span>
 </h1>
 
 <p class="hero-subtitle">
-    Halo! Aku Aurel ♡
-    Saya adalah siswa yang aktif, kreatif,
-    dan pantang menyerah dalam menghadapi
-    berbagai masalah serta mencoba hal baru.
+    Haiii, aku Aurel! Selamat datang di
+    little corner of my internet — tempat
+    kecil untuk menyimpan cerita, karya,
+    hal-hal yang aku suka, dan perjalanan
+    kecilku sebagai seorang pelajar.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#about" class="button button-main">
-    Kenal lebih dekat
+<a
+href="#about"
+class="button button-main"
+>
+    Kenalan yuk
     <i class="fa-solid fa-arrow-down"></i>
 </a>
 
-<a href="#projects" class="button button-soft">
+<a
+href="#projects"
+class="button button-soft"
+>
     Lihat karya
+    <i class="fa-solid fa-arrow-right"></i>
 </a>
 
 </div>
@@ -1540,13 +1392,13 @@ footer span{
 <div class="hero-photo-frame">
 
 <img
-src="profil, profil hero, sekolah, karya/profil.jpg"
-alt="Foto Della Aurellia"
 class="hero-photo"
+src="./profil.jpg"
+alt="Foto Della Aurellia"
 >
 
 <div class="photo-label">
-    🌷 X Manajemen Perkantoran 1
+    hi, i'm Aurel ♡
 </div>
 
 </div>
@@ -1556,11 +1408,26 @@ class="hero-photo"
 </section>
 
 
-<!-- =========================
-     MUSIC
-========================= -->
+<!-- MUSIC -->
 
-<section>
+<section id="music">
+
+<div class="reveal">
+
+<div class="section-number">
+    01 — Music
+</div>
+
+<h2 class="section-title">
+    Currently <em>listening.</em>
+</h2>
+
+<p class="description">
+    Salah satu lagu yang menemani
+    perjalanan kecilku.
+</p>
+
+</div>
 
 <div class="music-card reveal">
 
@@ -1571,16 +1438,16 @@ class="hero-photo"
 <div class="music-info">
 
 <div class="music-label">
-    MUSIK
+    now playing
 </div>
 
 <div class="music-title">
-    hate that i made you love me.mp3
+    Hate That I Made You Love Me ♡
 </div>
 
 <audio controls>
     <source
-    src="hate that i made you love me mp3.mp3"
+    src="./hate that i made you love me mp3.mp3"
     type="audio/mpeg">
 </audio>
 
@@ -1591,9 +1458,7 @@ class="hero-photo"
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -1602,8 +1467,8 @@ class="hero-photo"
 <div class="about-image reveal">
 
 <img
-src="profil, profil hero, sekolah, karya/foto profil hero.jpeg"
-alt="Della Aurellia"
+src="./foto profil hero.jpeg"
+alt="Foto Aurel"
 >
 
 <div class="about-sticker">
@@ -1616,7 +1481,7 @@ alt="Della Aurellia"
 <div class="about-text reveal">
 
 <div class="section-number">
-    01 — About Me
+    02 — About Me
 </div>
 
 <h2 class="section-title">
@@ -1624,42 +1489,81 @@ alt="Della Aurellia"
 </h2>
 
 <p class="description">
-    Saya adalah siswa yang aktif, kreatif,
-    dan pantang menyerah dalam menghadapi
-    berbagai masalah. Saya juga senang
-    mencoba hal baru dan menghabiskan waktu
-    untuk hal-hal yang bermanfaat.
+
+Haiii! Aku Aurel ♡
+
+Aku adalah seorang pelajar dari
+SMKN 42 Jakarta atau anak 42 yang
+sedang menikmati proses belajar,
+mencoba hal-hal baru, dan memahami
+diri sendiri.
+
+Aku suka menulis, bernyanyi, dan
+menonton film. Aku juga senang
+membuat sesuatu yang bisa menjadi
+tempat untuk menyimpan cerita dan
+kenangan.
+
+Website ini adalah little space milikku
+untuk menyimpan beberapa hal tentang
+aku, mulai dari kesukaan, hobi, karya,
+sampai momen-momen kecil yang ingin
+tetap aku ingat.
+
 </p>
 
-<br>
-
-<p class="description">
-    Saat ini saya sedang belajar berbagai
-    hal yang belum saya mengerti dan terus
-    berusaha berkembang melalui pengalaman
-    di sekolah maupun di luar sekolah.
-</p>
 
 <div class="about-highlight">
 
 <div class="info-box">
-    <small>Nama panggilan</small>
-    <strong>Aurel ♡</strong>
+
+<small>
+    school
+</small>
+
+<strong>
+    SMKN 42 Jakarta
+</strong>
+
 </div>
 
-<div class="info-box">
-    <small>Sekolah</small>
-    <strong>SMKN 42 Jakarta</strong>
-</div>
 
 <div class="info-box">
-    <small>Kelas</small>
-    <strong>X MP 1</strong>
+
+<small>
+    nickname
+</small>
+
+<strong>
+    Aurel ♡
+</strong>
+
 </div>
 
+
 <div class="info-box">
-    <small>Yang disukai</small>
-    <strong>Hal bermanfaat</strong>
+
+<small>
+    likes
+</small>
+
+<strong>
+    Writing & Singing
+</strong>
+
+</div>
+
+
+<div class="info-box">
+
+<small>
+    happy when
+</small>
+
+<strong>
+    Dihargai ♡
+</strong>
+
 </div>
 
 </div>
@@ -1671,26 +1575,23 @@ alt="Della Aurellia"
 </section>
 
 
-<!-- =========================
-     EDUCATION
-========================= -->
+<!-- EDUCATION -->
 
 <section id="education">
 
 <div class="reveal">
 
 <div class="section-number">
-    02 — Education
+    03 — Education
 </div>
 
 <h2 class="section-title">
-    My <em>education.</em>
+    My <em>school.</em>
 </h2>
 
 <p class="description">
-    Tempat saya belajar, berkembang,
-    menemukan pengalaman baru, dan
-    mempersiapkan diri untuk masa depan.
+    Tempat aku belajar, berkembang,
+    dan menjalani banyak cerita baru.
 </p>
 
 </div>
@@ -1701,33 +1602,34 @@ alt="Della Aurellia"
 <div class="education-image">
 
 <img
-src="profil, profil hero, sekolah, karya/smkn 42.jpeg"
-alt="SMK Negeri 42 Jakarta"
+src="./smkn 42.jpeg"
+alt="SMKN 42 Jakarta"
 >
 
 </div>
 
+
 <div class="education-content">
 
-<span class="education-tag">
+<div class="education-year">
     CURRENT EDUCATION
-</span>
+</div>
 
-<h3>SMK Negeri 42 Jakarta</h3>
+<h3>
+    SMKN 42 Jakarta
+</h3>
 
 <p>
-    Saya menempuh pendidikan di SMK Negeri 42
-    Jakarta dan mengambil jurusan Manajemen
-    Perkantoran. Saya mulai masuk pada tahun
-    2026 dan saat ini berada di kelas X.
+    Di sinilah aku menjalani perjalanan
+    sebagai seorang pelajar. Selain belajar
+    pelajaran sekolah, aku juga sedang
+    belajar memahami diri sendiri,
+    mencoba hal baru, dan mengembangkan
+    kemampuan yang aku punya.
 </p>
 
-<div class="edu-details">
-
-<span>2026 — Sekarang</span>
-<span>Manajemen Perkantoran</span>
-<span>X MP 1</span>
-
+<div class="education-tag">
+    ANAK 42 ♡
 </div>
 
 </div>
@@ -1737,25 +1639,23 @@ alt="SMK Negeri 42 Jakarta"
 </section>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
+<!-- SKILLS -->
 
 <section id="skills">
 
 <div class="reveal">
 
 <div class="section-number">
-    03 — Skills
+    04 — Skills
 </div>
 
 <h2 class="section-title">
-    What I <em>can do.</em>
+    Things I'm <em>learning.</em>
 </h2>
 
 <p class="description">
-    Beberapa kemampuan yang saya miliki
-    dan terus saya kembangkan.
+    Beberapa kemampuan yang sedang
+    aku pelajari dan kembangkan.
 </p>
 
 </div>
@@ -1764,51 +1664,78 @@ alt="SMK Negeri 42 Jakarta"
 <div class="skills-grid">
 
 <div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-pen-nib"></i>
-    </div>
-    <h3>Writing</h3>
-    <p>Menulis dan menuangkan ide melalui kata-kata.</p>
+
+<div class="skill-icon">
+    <i class="fa-solid fa-pen"></i>
 </div>
 
-<div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-palette"></i>
-    </div>
-    <h3>Canva / Design</h3>
-    <p>Membuat berbagai desain dan visual kreatif.</p>
+<h3>
+    Writing
+</h3>
+
+<p>
+    Menulis cerita, ide, dan berbagai
+    hal yang ingin aku tuangkan
+    menjadi kata-kata.
+</p>
+
 </div>
 
-<div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-code"></i>
-    </div>
-    <h3>HTML / CSS</h3>
-    <p>Membuat dan mengembangkan tampilan website.</p>
-</div>
 
 <div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-microphone"></i>
-    </div>
-    <h3>Singing</h3>
-    <p>Mengekspresikan diri melalui musik dan suara.</p>
+
+<div class="skill-icon">
+    <i class="fa-solid fa-laptop-code"></i>
 </div>
 
-<div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-mobile-screen"></i>
-    </div>
-    <h3>Editing</h3>
-    <p>Mengedit berbagai konten visual dan digital.</p>
+<h3>
+    Web Design
+</h3>
+
+<p>
+    Belajar membuat tampilan website
+    yang menarik, rapi, dan nyaman
+    untuk dilihat.
+</p>
+
 </div>
 
+
 <div class="skill-card reveal">
-    <div class="skill-icon">
-        <i class="fa-solid fa-comments"></i>
-    </div>
-    <h3>Public Speaking</h3>
-    <p>Belajar menyampaikan ide dengan percaya diri.</p>
+
+<div class="skill-icon">
+    <i class="fa-solid fa-lightbulb"></i>
+</div>
+
+<h3>
+    Creativity
+</h3>
+
+<p>
+    Mencoba menuangkan ide menjadi
+    sesuatu yang memiliki karakter
+    dan terasa personal.
+</p>
+
+</div>
+
+
+<div class="skill-card reveal">
+
+<div class="skill-icon">
+    <i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>
+    Learning
+</h3>
+
+<p>
+    Terus belajar dari pengalaman,
+    kesalahan, dan hal-hal baru
+    yang aku temui.
+</p>
+
 </div>
 
 </div>
@@ -1816,16 +1743,14 @@ alt="SMK Negeri 42 Jakarta"
 </section>
 
 
-<!-- =========================
-     HOBBIES
-========================= -->
+<!-- HOBBIES -->
 
 <section id="hobbies">
 
 <div class="reveal">
 
 <div class="section-number">
-    04 — Hobbies & Favorites
+    04.5 — Hobbies & Favorites
 </div>
 
 <h2 class="section-title">
@@ -1833,25 +1758,37 @@ alt="SMK Negeri 42 Jakarta"
 </h2>
 
 <p class="description">
-    Hal-hal sederhana yang sering saya
-    lakukan untuk mengisi waktu.
+    Beberapa hal sederhana yang aku
+    suka lakukan di waktu luang.
 </p>
 
 </div>
 
 
-<div class="hobby-grid">
+<div class="hobbies-grid">
+
 
 <div class="hobby-card reveal">
 
+<div class="hobby-image">
+
 <img
-src="hobi/hobi nulis.jpeg"
+src="./hobi/hobi nulis.jpeg"
 alt="Writing"
 >
 
+</div>
+
 <div class="hobby-info">
-    <small>HOBBY 01</small>
-    <h3>Writing ✍🏻</h3>
+
+<small>
+    HOBBY 01
+</small>
+
+<h3>
+    Writing ✍🏻
+</h3>
+
 </div>
 
 </div>
@@ -1859,14 +1796,25 @@ alt="Writing"
 
 <div class="hobby-card reveal">
 
+<div class="hobby-image">
+
 <img
-src="hobi/hobi nyanyi.jpeg"
+src="./hobi/hobi nyanyi.jpeg"
 alt="Singing"
 >
 
+</div>
+
 <div class="hobby-info">
-    <small>HOBBY 02</small>
-    <h3>Singing 🎤</h3>
+
+<small>
+    HOBBY 02
+</small>
+
+<h3>
+    Singing 🎤
+</h3>
+
 </div>
 
 </div>
@@ -1874,14 +1822,25 @@ alt="Singing"
 
 <div class="hobby-card reveal">
 
+<div class="hobby-image">
+
 <img
-src="hobi/hobi nonton.jpeg"
+src="./hobi/hobi nonton.jpeg"
 alt="Watching Movies"
 >
 
+</div>
+
 <div class="hobby-info">
-    <small>HOBBY 03</small>
-    <h3>Watching Movies 🎬</h3>
+
+<small>
+    HOBBY 03
+</small>
+
+<h3>
+    Watching Movies 🎬
+</h3>
+
 </div>
 
 </div>
@@ -1891,9 +1850,7 @@ alt="Watching Movies"
 </section>
 
 
-<!-- =========================
-     PROJECT
-========================= -->
+<!-- PROJECT -->
 
 <section id="projects">
 
@@ -1920,7 +1877,7 @@ alt="Watching Movies"
 <div class="project-image">
 
 <img
-src="profil, profil hero, sekolah, karya/karya.png"
+src="./karya.png"
 alt="Website Aurelliee"
 >
 
@@ -1932,7 +1889,9 @@ alt="Website Aurelliee"
     PROJECT 01
 </div>
 
-<h3>Website Aurelliee +</h3>
+<h3>
+    Website Aurelliee +
+</h3>
 
 <p>
     Website ini adalah keberhasilan dari
@@ -1958,9 +1917,7 @@ class="project-button"
 </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
+<!-- MEMORIES -->
 
 <section id="memories">
 
@@ -1985,43 +1942,43 @@ class="project-button"
 <div class="memories-grid">
 
 <div class="memory reveal">
-    <img src="memories/1.jpg" alt="Memory 1">
+    <img src="./memories/1.jpg" alt="Memory 1">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/2.jpg" alt="Memory 2">
+    <img src="./memories/2.jpg" alt="Memory 2">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/3.jpg" alt="Memory 3">
+    <img src="./memories/3.jpg" alt="Memory 3">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/4.jpg" alt="Memory 4">
+    <img src="./memories/4.jpg" alt="Memory 4">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/5.jpg" alt="Memory 5">
+    <img src="./memories/5.jpg" alt="Memory 5">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/6.jpg" alt="Memory 6">
+    <img src="./memories/6.jpg" alt="Memory 6">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/7.jpg" alt="Memory 7">
+    <img src="./memories/7.jpg" alt="Memory 7">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/8.jpg" alt="Memory 8">
+    <img src="./memories/8.jpg" alt="Memory 8">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/9.jpg" alt="Memory 9">
+    <img src="./memories/9.jpg" alt="Memory 9">
 </div>
 
 <div class="memory reveal">
-    <img src="memories/10.jpg" alt="Memory 10">
+    <img src="./memories/10.jpg" alt="Memory 10">
 </div>
 
 </div>
@@ -2029,9 +1986,7 @@ class="project-button"
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -2041,7 +1996,9 @@ class="project-button"
     07 — Contact
 </div>
 
-<h3>Let's connect ♡</h3>
+<h3>
+    Let's connect ♡
+</h3>
 
 <p>
     Kamu bisa menemukan dan menghubungi
@@ -2094,9 +2051,7 @@ title="Email"
 </section>
 
 
-<!-- =========================
-     TESTIMONIALS
-========================= -->
+<!-- TESTIMONIALS -->
 
 <section id="testimonials">
 
@@ -2226,15 +2181,15 @@ title="Email"
 </section>
 
 
-<!-- =========================
-     FINAL MESSAGE
-========================= -->
+<!-- FINAL MESSAGE -->
 
 <section class="final-section">
 
 <div class="final-card reveal">
 
-<h2>Pesan untuk pembaca ♡</h2>
+<h2>
+    Pesan untuk pembaca ♡
+</h2>
 
 <p>
     Terima kasih sudah meluangkan waktu
@@ -2256,9 +2211,7 @@ id="messageButton"
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
     <span>♡</span> (2026) by Aurel <span>♡</span>
@@ -2267,9 +2220,7 @@ id="messageButton"
 
 <script>
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+/* SCROLL REVEAL */
 
 const revealElements =
 document.querySelectorAll(".reveal");
@@ -2301,9 +2252,7 @@ revealElements.forEach(function(element){
 });
 
 
-/* =========================
-   EMOJI EXPLOSION
-========================= */
+/* EMOJI EXPLOSION */
 
 const messageButton =
 document.getElementById("messageButton");
@@ -2394,9 +2343,7 @@ messageButton.addEventListener(
 );
 
 
-/* =========================
-   MEMORY IMAGE CLICK
-========================= */
+/* MEMORY IMAGE CLICK */
 
 document
 .querySelectorAll(".memory")
