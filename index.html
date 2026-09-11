@@ -6,27 +6,24 @@
 
 <title>Della Aurellia ♡ Aurel</title>
 
-<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 :root{
-    --pink:#d98da8;
-    --dark-pink:#a95778;
-    --rose:#efb6c9;
-    --cream:#fff8ef;
-    --soft:#fff1f5;
-    --lav:#eee3f5;
-    --text:#7d5364;
-    --muted:#a77b8c;
-    --white:#fffdfb;
-    --shadow:0 20px 60px rgba(166,92,120,.15);
-    --radius:28px;
+    --pink:#e8a3ba;
+    --pink2:#cf7898;
+    --soft:#f9dce6;
+    --cream:#fff8ed;
+    --cream2:#f7eadc;
+    --text:#795767;
+    --dark:#9b6079;
+    --white:#fffdf9;
+    --shadow:0 20px 55px rgba(173,100,130,.16);
 }
 
 *{
@@ -39,446 +36,445 @@
 body{
     font-family:'DM Sans',sans-serif;
     color:var(--text);
-    background:
-        radial-gradient(circle at 10% 10%,rgba(239,182,201,.35),transparent 25%),
-        radial-gradient(circle at 90% 30%,rgba(238,227,245,.55),transparent 28%),
-        linear-gradient(135deg,#fff8ef 0%,#fff0f5 48%,#f5edf8 100%);
     overflow-x:hidden;
+    background:
+    radial-gradient(circle at 10% 15%,rgba(238,170,195,.25),transparent 28%),
+    radial-gradient(circle at 90% 40%,rgba(255,215,175,.25),transparent 30%),
+    linear-gradient(135deg,#fffaf5,#fff0f5,#fffaf0);
 }
 
-/* BACKGROUND DECORATIONS */
 body::before,
 body::after{
     content:"";
     position:fixed;
-    z-index:-2;
+    width:230px;
+    height:230px;
     border-radius:50%;
-    filter:blur(5px);
+    filter:blur(80px);
+    z-index:-2;
+    pointer-events:none;
 }
 
 body::before{
-    width:280px;
-    height:280px;
-    background:rgba(239,182,201,.18);
-    top:12%;
-    left:-100px;
+    background:rgba(232,159,190,.22);
+    left:-120px;
+    top:20%;
 }
 
 body::after{
-    width:330px;
-    height:330px;
-    background:rgba(211,190,226,.2);
-    bottom:5%;
+    background:rgba(255,208,157,.18);
     right:-120px;
+    bottom:10%;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button{
-    font-family:inherit;
-}
-
-/* FLOATING FLOWERS */
 .decor{
     position:fixed;
     z-index:-1;
-    color:rgba(191,111,139,.28);
     pointer-events:none;
-    animation:floatDecor 7s ease-in-out infinite;
+    color:#d996ae;
+    opacity:.45;
+    animation:float 6s ease-in-out infinite;
 }
 
-.decor.one{top:18%;left:3%;font-size:28px;}
-.decor.two{top:42%;right:4%;font-size:23px;animation-delay:1s;}
-.decor.three{bottom:18%;left:5%;font-size:20px;animation-delay:2s;}
-.decor.four{bottom:30%;right:7%;font-size:30px;animation-delay:3s;}
+.d1{top:16%;left:3%;font-size:28px}
+.d2{top:42%;right:4%;font-size:30px;animation-delay:1s}
+.d3{top:72%;left:5%;font-size:22px;animation-delay:2s}
+.d4{bottom:8%;right:7%;font-size:28px;animation-delay:3s}
 
-@keyframes floatDecor{
-    0%,100%{transform:translateY(0) rotate(0deg);}
-    50%{transform:translateY(-18px) rotate(8deg);}
+@keyframes float{
+    0%,100%{transform:translateY(0) rotate(0)}
+    50%{transform:translateY(-18px) rotate(8deg)}
 }
 
 /* NAVBAR */
-.navbar{
+
+nav{
     position:fixed;
+    z-index:1000;
     top:18px;
     left:50%;
     transform:translateX(-50%);
-    width:min(94%,1100px);
-    padding:13px 18px;
+    width:min(95%,1120px);
+    padding:13px 20px;
+    border-radius:50px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    z-index:1000;
-    background:rgba(255,253,251,.78);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.85);
-    border-radius:999px;
-    box-shadow:0 15px 45px rgba(151,85,109,.12);
+    align-items:center;
+    background:rgba(255,250,247,.72);
+    border:1px solid rgba(255,255,255,.8);
+    backdrop-filter:blur(18px);
+    box-shadow:0 12px 35px rgba(160,95,120,.12);
 }
 
 .logo{
     font-family:'Playfair Display',serif;
     font-size:22px;
-    font-weight:700;
-    color:var(--dark-pink);
-    padding-left:10px;
+    text-decoration:none;
+    color:var(--pink2);
+    font-weight:600;
 }
 
 .logo span{
-    color:#c78ba2;
+    color:#d49a6e;
 }
 
 .nav-links{
     display:flex;
-    gap:4px;
     list-style:none;
+    gap:5px;
 }
 
 .nav-links a{
-    display:block;
-    padding:9px 13px;
-    border-radius:999px;
+    color:var(--text);
+    text-decoration:none;
     font-size:12px;
-    font-weight:600;
-    color:#95697a;
+    font-weight:700;
+    padding:9px 11px;
+    border-radius:25px;
     transition:.3s;
 }
 
 .nav-links a:hover{
-    background:#f9dce7;
-    color:var(--dark-pink);
-    transform:translateY(-2px);
+    background:var(--soft);
+    color:var(--pink2);
 }
 
 /* GENERAL */
+
 section{
-    width:min(1100px,92%);
+    width:min(1120px,90%);
     margin:auto;
-    padding:105px 0 30px;
+    padding:105px 0 45px;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:48px;
+    margin-bottom:45px;
 }
 
-.section-title .mini{
-    font-size:11px;
+.mini{
     text-transform:uppercase;
-    letter-spacing:4px;
-    color:#c27d99;
+    letter-spacing:3px;
+    font-size:12px;
     font-weight:700;
-    margin-bottom:8px;
+    color:var(--pink2);
 }
 
 .section-title h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(35px,5vw,53px);
-    color:#9d5d78;
-    line-height:1;
-}
-
-.section-title h2 em{
     font-family:'Cormorant Garamond',serif;
-    font-weight:600;
-    color:#d18aa5;
+    color:var(--dark);
+    font-size:clamp(45px,6vw,70px);
+    line-height:1;
+    margin:9px 0 14px;
 }
 
 .section-title p{
-    max-width:550px;
-    margin:16px auto 0;
-    color:#aa8190;
-    font-size:14px;
+    max-width:620px;
+    margin:auto;
     line-height:1.8;
+    color:#987685;
+}
+
+.card{
+    background:rgba(255,255,255,.56);
+    border:1px solid rgba(255,255,255,.82);
+    backdrop-filter:blur(16px);
+    box-shadow:var(--shadow);
 }
 
 /* HERO */
+
 .hero{
     min-height:100vh;
-    width:min(1100px,92%);
+    width:min(1180px,92%);
     margin:auto;
-    padding-top:135px;
+    padding:140px 0 75px;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:70px;
     align-items:center;
+    gap:65px;
 }
 
-.hero-text .small{
-    color:#bd7492;
-    font-size:13px;
-    letter-spacing:3px;
-    text-transform:uppercase;
+.small-label{
+    display:inline-flex;
+    gap:8px;
+    padding:8px 15px;
+    border-radius:30px;
+    background:rgba(255,255,255,.7);
+    color:var(--pink2);
+    font-size:11px;
     font-weight:700;
-    margin-bottom:14px;
+    letter-spacing:1px;
 }
 
-.hero-text h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(55px,8vw,90px);
-    line-height:.9;
-    color:#95556f;
-    margin-bottom:20px;
-}
-
-.hero-text h1 span{
-    display:block;
+.hero h1{
+    margin-top:23px;
     font-family:'Cormorant Garamond',serif;
-    font-style:italic;
+    color:#9b6079;
+    font-size:clamp(65px,8vw,105px);
+    line-height:.82;
     font-weight:600;
-    color:#d286a1;
 }
 
-.hero-text p{
-    max-width:470px;
-    font-size:15px;
+.hero h1 span{
+    display:block;
+    color:#d189a5;
+    font-style:italic;
+}
+
+.hero-description{
+    max-width:510px;
+    margin-top:28px;
     line-height:1.9;
-    color:#9d7181;
+    color:#896a78;
 }
 
 .hero-buttons{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
-    margin-top:28px;
+    gap:12px;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
+    gap:9px;
     padding:13px 21px;
-    border-radius:999px;
-    border:1px solid #efc6d4;
-    background:rgba(255,255,255,.62);
-    color:#a35e7c;
+    border-radius:40px;
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
     font-size:13px;
     font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 8px 25px rgba(181,101,130,.1);
+    transition:.35s;
+}
+
+.btn-primary{
+    color:white;
+    background:linear-gradient(135deg,#df94af,#c87798);
+    box-shadow:0 13px 28px rgba(190,105,137,.23);
+}
+
+.btn-secondary{
+    color:#a66a82;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(213,145,169,.3);
 }
 
 .btn:hover{
     transform:translateY(-4px);
-    box-shadow:0 15px 30px rgba(181,101,130,.18);
-}
-
-.btn.primary{
-    background:linear-gradient(135deg,#d98eaa,#bd6f91);
-    color:white;
-    border:none;
+    box-shadow:0 15px 30px rgba(170,100,130,.2);
 }
 
 .hero-photo{
-    position:relative;
     display:flex;
     justify-content:center;
-}
-
-.hero-photo::before{
-    content:"";
-    position:absolute;
-    width:330px;
-    height:390px;
-    border:1px solid rgba(204,126,153,.35);
-    border-radius:52% 48% 45% 55%;
-    transform:rotate(8deg);
-}
-
-.hero-photo::after{
-    content:"✿";
-    position:absolute;
-    top:-28px;
-    right:35px;
-    color:#d78da7;
-    font-size:38px;
-    transform:rotate(15deg);
-}
-
-.hero-photo img{
     position:relative;
-    width:315px;
-    height:390px;
+}
+
+.photo-frame{
+    width:min(390px,85vw);
+    aspect-ratio:4/5;
+    padding:10px;
+    border-radius:48% 48% 30px 30px;
+    background:linear-gradient(145deg,#f3c7d7,#fff5e8,#e7b0c5);
+    box-shadow:0 30px 70px rgba(166,95,123,.22);
+    transform:rotate(3deg);
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
     object-fit:cover;
-    border-radius:48% 48% 38% 38%;
-    border:10px solid rgba(255,255,255,.72);
-    box-shadow:0 30px 70px rgba(157,83,112,.2);
-    z-index:1;
+    border-radius:42% 42% 23px 23px;
+    display:block;
+}
+
+.photo-sticker{
+    position:absolute;
+    bottom:15px;
+    left:3%;
+    padding:12px 16px;
+    border-radius:17px;
+    background:#fffaf4;
+    box-shadow:0 12px 30px rgba(140,85,105,.14);
+    transform:rotate(-5deg);
+    font-family:'Playfair Display',serif;
+    color:#a76680;
+}
+
+.flower{
+    position:absolute;
+    color:#d68fa9;
+    font-size:34px;
+}
+
+.flower.one{
+    top:-22px;
+    right:5%;
+}
+
+.flower.two{
+    bottom:28px;
+    right:-15px;
+    font-size:28px;
 }
 
 /* ABOUT */
+
 .about-grid{
     display:grid;
-    grid-template-columns:380px 1fr;
-    gap:60px;
+    grid-template-columns:.85fr 1.15fr;
+    gap:45px;
     align-items:center;
 }
 
-.about-photo{
-    position:relative;
+.about-image{
+    padding:12px;
+    border-radius:35px;
+    background:rgba(255,255,255,.55);
+    box-shadow:var(--shadow);
+    transform:rotate(-2deg);
 }
 
-.about-photo img{
+.about-image img{
     width:100%;
-    height:440px;
+    height:430px;
     object-fit:cover;
-    border-radius:35px;
-    border:8px solid rgba(255,255,255,.75);
-    box-shadow:var(--shadow);
+    display:block;
+    border-radius:26px;
 }
 
-.about-photo .tag{
-    position:absolute;
-    bottom:-18px;
-    right:-15px;
-    padding:14px 20px;
-    background:rgba(255,253,251,.9);
-    border:1px solid #f1ceda;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(163,91,116,.14);
-    font-family:'Playfair Display',serif;
-    color:#aa617e;
+.about-content{
+    padding:38px;
+    border-radius:30px;
 }
 
-.about-card{
-    padding:35px;
-    border-radius:35px;
-    background:rgba(255,253,251,.63);
-    border:1px solid rgba(255,255,255,.9);
-    box-shadow:var(--shadow);
-    backdrop-filter:blur(14px);
+.about-content h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:44px;
+    color:#a0647d;
+    margin-bottom:17px;
 }
 
-.about-card h3{
-    font-family:'Playfair Display',serif;
-    font-size:32px;
-    color:#9b5a74;
-    margin-bottom:18px;
-}
-
-.about-card p{
+.about-content p{
     line-height:1.9;
-    font-size:14px;
-    color:#987080;
-    margin-bottom:15px;
+    margin-bottom:16px;
 }
 
 .highlight{
-    color:#bb6988;
+    color:#c57494;
     font-weight:700;
 }
 
-/* MUSIC */
-.music-card{
-    position:relative;
-    overflow:hidden;
-    padding:35px;
+/* MUSIC - TEPAT SETELAH ABOUT */
+
+.music-box{
+    padding:36px;
     border-radius:35px;
-    background:
-        linear-gradient(135deg,rgba(255,255,255,.86),rgba(252,231,239,.72));
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:var(--shadow);
     display:grid;
     grid-template-columns:auto 1fr;
+    gap:28px;
     align-items:center;
-    gap:25px;
+    background:
+    linear-gradient(135deg,rgba(255,255,255,.72),rgba(252,220,230,.72));
+    border:1px solid rgba(255,255,255,.85);
+    box-shadow:var(--shadow);
 }
 
-.music-disc{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#d58ba6,#a95c7b);
+.music-icon{
+    width:85px;
+    height:85px;
+    display:grid;
+    place-items:center;
+    border-radius:26px;
+    background:linear-gradient(135deg,#e3a0b8,#c77697);
     color:white;
-    font-size:28px;
-    box-shadow:0 15px 35px rgba(167,86,115,.2);
-    animation:spin 7s linear infinite;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-.music-info .label{
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    color:#c17b96;
-    font-weight:700;
+    font-size:31px;
+    box-shadow:0 15px 30px rgba(194,111,142,.2);
 }
 
 .music-info h3{
     font-family:'Playfair Display',serif;
-    font-size:27px;
-    color:#965670;
-    margin:5px 0 15px;
+    font-size:25px;
+    color:#9c617a;
+    margin-bottom:5px;
+}
+
+.music-info p{
+    font-size:13px;
+    margin-bottom:16px;
 }
 
 audio{
     width:100%;
-    height:42px;
-    accent-color:#c87695;
+    max-width:700px;
 }
 
 /* EDUCATION */
-.edu-card{
+
+.education-card{
+    max-width:850px;
+    margin:auto;
+    padding:36px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.education-card::after{
+    content:"42";
+    position:absolute;
+    right:-10px;
+    top:-65px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:190px;
+    font-weight:700;
+    color:rgba(215,137,164,.08);
+}
+
+.edu-icon{
+    width:65px;
+    height:65px;
     display:grid;
-    grid-template-columns:250px 1fr;
-    gap:35px;
-    align-items:center;
-    padding:25px;
-    background:rgba(255,253,251,.68);
-    border-radius:35px;
-    border:1px solid rgba(255,255,255,.9);
-    box-shadow:var(--shadow);
+    place-items:center;
+    border-radius:20px;
+    background:#f8dce6;
+    color:#c67794;
+    font-size:24px;
+    margin-bottom:21px;
 }
 
-.edu-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:25px;
+.education-card h3{
+    font-family:'Playfair Display',serif;
+    color:#9b627b;
+    font-size:28px;
 }
 
-.edu-content .year{
-    display:inline-block;
+.edu-meta{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin:13px 0 15px;
+}
+
+.pill{
     padding:7px 13px;
-    border-radius:999px;
-    background:#f7dbe5;
-    color:#a9607d;
+    border-radius:30px;
+    background:#fff0e8;
+    color:#bd7890;
     font-size:11px;
     font-weight:700;
-    margin-bottom:12px;
 }
 
-.edu-content h3{
-    font-family:'Playfair Display',serif;
-    font-size:31px;
-    color:#965670;
-}
-
-.edu-content h4{
-    margin:8px 0 14px;
-    color:#c0718f;
-}
-
-.edu-content p{
-    color:#9d7785;
+.education-card p{
     line-height:1.8;
-    font-size:14px;
 }
 
 /* SKILLS */
+
 .skills-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -486,390 +482,325 @@ audio{
 }
 
 .skill-card{
-    position:relative;
     padding:28px 22px;
     text-align:center;
-    background:rgba(255,253,251,.65);
-    border:1px solid rgba(255,255,255,.9);
-    border-radius:27px;
-    box-shadow:0 15px 40px rgba(161,92,116,.09);
+    border-radius:25px;
     transition:.35s;
-    overflow:hidden;
-}
-
-.skill-card::before{
-    content:"";
-    position:absolute;
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:#f9dfe8;
-    top:-40px;
-    right:-25px;
 }
 
 .skill-card:hover{
-    transform:translateY(-8px) rotate(.5deg);
-    box-shadow:0 25px 50px rgba(161,92,116,.15);
+    transform:translateY(-8px) rotate(1deg);
 }
 
-.skill-icon{
-    position:relative;
-    width:60px;
-    height:60px;
-    margin:0 auto 14px;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#f8e1e9;
-    color:#b56884;
-    font-size:23px;
+.skill-card i{
+    font-size:28px;
+    color:#ca7897;
+    margin-bottom:14px;
 }
 
 .skill-card h3{
     font-family:'Playfair Display',serif;
+    color:#996177;
     font-size:20px;
-    color:#9a5b74;
+}
+
+.skill-card p{
+    font-size:12px;
+    margin-top:7px;
 }
 
 /* HOBBIES */
-.hobbies-grid{
+
+.hobby-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:24px;
 }
 
 .hobby-card{
-    background:rgba(255,253,251,.72);
-    border:1px solid rgba(255,255,255,.95);
-    border-radius:30px;
     overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:.35s;
+    border-radius:30px;
+    transition:.4s;
 }
 
 .hobby-card:hover{
-    transform:translateY(-9px);
-    box-shadow:0 28px 60px rgba(157,83,112,.18);
+    transform:translateY(-10px);
 }
 
 .hobby-img{
     height:260px;
     overflow:hidden;
-    position:relative;
-}
-
-.hobby-img::after{
-    content:"♡";
-    position:absolute;
-    top:14px;
-    right:16px;
-    width:35px;
-    height:35px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:rgba(255,253,251,.75);
-    color:#b96887;
-    backdrop-filter:blur(5px);
 }
 
 .hobby-img img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.5s;
+    display:block;
+    transition:.6s;
 }
 
-.hobby-card:hover .hobby-img img{
+.hobby-card:hover img{
     transform:scale(1.07);
 }
 
 .hobby-info{
-    padding:22px;
-}
-
-.hobby-info .number{
-    color:#d18ba5;
-    font-size:11px;
-    letter-spacing:2px;
-    font-weight:700;
+    padding:24px;
 }
 
 .hobby-info h3{
     font-family:'Playfair Display',serif;
-    font-size:25px;
-    color:#985871;
-    margin-top:5px;
+    color:#9c607a;
+    font-size:24px;
+}
+
+.hobby-info p{
+    margin-top:7px;
+    line-height:1.7;
+    font-size:13px;
 }
 
 /* PROJECT */
-.project-showcase{
-    position:relative;
+
+.project-card{
     display:grid;
     grid-template-columns:1.05fr .95fr;
-    gap:0;
     overflow:hidden;
-    border-radius:38px;
-    background:rgba(255,253,251,.76);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 25px 70px rgba(151,80,108,.16);
+    border-radius:35px;
 }
 
 .project-image{
-    min-height:420px;
-    position:relative;
+    min-height:430px;
     overflow:hidden;
-    background:#f4dce5;
-}
-
-.project-image::after{
-    content:"PROJECT • 01";
-    position:absolute;
-    left:22px;
-    bottom:20px;
-    padding:9px 13px;
-    border-radius:999px;
-    background:rgba(255,253,251,.8);
-    color:#a45d79;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:2px;
-    backdrop-filter:blur(8px);
 }
 
 .project-image img{
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
     transition:.6s;
 }
 
-.project-showcase:hover .project-image img{
+.project-card:hover .project-image img{
     transform:scale(1.04);
 }
 
-.project-info{
+.project-content{
     padding:48px;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
-.project-info .eyebrow{
-    text-transform:uppercase;
+.project-number{
+    color:#cf809d;
     letter-spacing:3px;
-    color:#c27895;
-    font-size:10px;
+    font-size:11px;
     font-weight:700;
 }
 
-.project-info h3{
-    font-family:'Playfair Display',serif;
-    font-size:38px;
-    color:#94546f;
-    margin:10px 0 15px;
+.project-content h3{
+    font-family:'Cormorant Garamond',serif;
+    color:#9a6079;
+    font-size:55px;
+    line-height:1;
+    margin:12px 0 17px;
 }
 
-.project-info p{
-    font-size:14px;
+.project-content p{
     line-height:1.9;
-    color:#98717f;
-    margin-bottom:20px;
+    margin-bottom:22px;
 }
 
-.project-pills{
+.tech{
     display:flex;
-    gap:8px;
     flex-wrap:wrap;
-    margin-bottom:25px;
+    gap:8px;
+    margin-bottom:28px;
 }
 
-.project-pills span{
+.tech span{
     padding:7px 12px;
-    border-radius:999px;
-    background:#f8e0e8;
-    color:#a45f7b;
-    font-size:10px;
+    border-radius:20px;
+    background:#f9e0e7;
+    color:#b96f89;
+    font-size:11px;
     font-weight:700;
-}
-
-.project-info .btn{
-    align-self:flex-start;
 }
 
 /* MEMORIES */
-.memories-grid{
-    columns:3 220px;
+
+.memory-grid{
+    columns:3 250px;
     column-gap:18px;
 }
 
-.memory{
-    position:relative;
+.memory-item{
     break-inside:avoid;
     margin-bottom:18px;
     border-radius:25px;
     overflow:hidden;
-    box-shadow:0 15px 35px rgba(150,83,108,.12);
-    border:5px solid rgba(255,255,255,.72);
     cursor:pointer;
+    box-shadow:0 12px 30px rgba(145,85,107,.11);
 }
 
-.memory img{
-    display:block;
+.memory-item img{
     width:100%;
+    display:block;
     transition:.5s;
 }
 
-.memory:hover img{
-    transform:scale(1.06);
+.memory-item:hover img{
+    transform:scale(1.045);
 }
 
-.memory::after{
-    content:"♡";
-    position:absolute;
-    right:12px;
-    bottom:10px;
-    color:white;
-    font-size:20px;
-    text-shadow:0 2px 8px rgba(0,0,0,.2);
+/* TESTIMONI */
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.testimonial{
+    padding:31px;
+    border-radius:28px;
+    transition:.35s;
+}
+
+.testimonial:hover{
+    transform:translateY(-7px);
+}
+
+.quote{
+    font-family:'Cormorant Garamond',serif;
+    color:#dfa0b7;
+    font-size:70px;
+    line-height:.5;
+}
+
+.testimonial p{
+    font-size:14px;
+    line-height:1.8;
+    font-style:italic;
+    margin:22px 0;
+}
+
+.testimonial-author{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.author-icon{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#f8dce6;
+    color:#c57594;
+}
+
+.author-text strong{
+    display:block;
+    color:#9a6079;
+    font-size:13px;
+}
+
+.author-text span{
+    font-size:11px;
+    color:#aa8995;
 }
 
 /* CONTACT */
+
 .contact-box{
-    padding:45px;
+    padding:48px;
+    border-radius:35px;
     text-align:center;
-    border-radius:38px;
     background:
-        linear-gradient(135deg,rgba(255,255,255,.82),rgba(250,224,234,.72));
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:var(--shadow);
+    radial-gradient(circle at top left,rgba(247,197,215,.55),transparent 35%),
+    rgba(255,255,255,.62);
 }
 
-.contact-box h3{
-    font-family:'Playfair Display',serif;
-    font-size:35px;
-    color:#965670;
-    margin-bottom:10px;
+.contact-box h2{
+    font-family:'Cormorant Garamond',serif;
+    color:#9b617a;
+    font-size:55px;
 }
 
 .contact-box p{
-    font-size:14px;
+    max-width:550px;
+    margin:12px auto 30px;
     line-height:1.8;
-    color:#a07887;
-    max-width:580px;
-    margin:0 auto 27px;
 }
 
 .socials{
     display:flex;
     justify-content:center;
+    gap:13px;
     flex-wrap:wrap;
-    gap:12px;
 }
 
 .social{
-    width:53px;
-    height:53px;
+    width:52px;
+    height:52px;
+    display:grid;
+    place-items:center;
     border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fffaf7;
-    border:1px solid #f0ccd8;
-    color:#a45f7c;
-    font-size:21px;
-    transition:.3s;
+    text-decoration:none;
+    color:#a66580;
+    background:#fff8f3;
+    border:1px solid rgba(215,147,170,.3);
+    transition:.35s;
 }
 
 .social:hover{
     transform:translateY(-6px) rotate(-4deg);
-    background:#f6d8e3;
+    background:#f8dce6;
+    color:#b96283;
 }
 
-/* SURPRISE */
+.contact-note{
+    margin-top:22px!important;
+    font-size:12px;
+}
+
+/* PESAN */
+
 .surprise{
     text-align:center;
-    padding-bottom:50px;
+    padding:80px 0 100px;
 }
 
-.surprise-card{
-    position:relative;
-    overflow:hidden;
-    padding:45px 25px;
-    border-radius:40px;
-    background:rgba(255,253,251,.65);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:var(--shadow);
+.surprise h2{
+    font-family:'Cormorant Garamond',serif;
+    color:#9a6078;
+    font-size:50px;
+    margin-bottom:14px;
 }
 
-.surprise-card h2{
-    font-family:'Playfair Display',serif;
-    color:#965670;
-    font-size:36px;
-    margin-bottom:10px;
-}
-
-.surprise-card p{
-    color:#a07988;
-    font-size:14px;
+.surprise p{
     margin-bottom:25px;
 }
 
-.explode-btn{
-    border:none;
-    padding:16px 28px;
-    border-radius:999px;
-    background:linear-gradient(135deg,#d98daa,#b96a8a);
-    color:white;
-    font-weight:700;
-    cursor:pointer;
-    box-shadow:0 15px 30px rgba(177,91,121,.2);
-    transition:.3s;
-}
-
-.explode-btn:hover{
-    transform:translateY(-4px) scale(1.03);
-}
-
-/* EMOJI */
-.emoji{
-    position:fixed;
-    pointer-events:none;
-    z-index:9999;
-    font-size:24px;
-    animation:emojiFly 1.5s ease-out forwards;
-}
-
-@keyframes emojiFly{
-    0%{
-        opacity:1;
-        transform:translate(0,0) scale(.6) rotate(0);
-    }
-    100%{
-        opacity:0;
-        transform:translate(var(--x),var(--y)) scale(1.3) rotate(360deg);
-    }
-}
-
 /* FOOTER */
+
 footer{
     text-align:center;
-    padding:25px;
-    color:#b17b8d;
+    padding:35px 20px 45px;
+    color:#aa7d8c;
     font-size:12px;
-    letter-spacing:1px;
 }
 
-footer span{
-    color:#c06f8e;
-    font-family:'Playfair Display',serif;
-    font-size:15px;
+footer .heart{
+    color:#d27e9b;
 }
 
 /* REVEAL */
+
 .reveal{
     opacity:0;
     transform:translateY(35px);
@@ -881,16 +812,33 @@ footer span{
     transform:translateY(0);
 }
 
-/* MOBILE */
-@media(max-width:800px){
+/* EMOJI */
 
-    .navbar{
-        top:10px;
-        width:94%;
+.explosion{
+    position:fixed;
+    pointer-events:none;
+    z-index:9999;
+    font-size:25px;
+    animation:explode 1.1s ease-out forwards;
+}
+
+@keyframes explode{
+    0%{
+        opacity:1;
+        transform:translate(0,0) scale(.6) rotate(0);
     }
+    100%{
+        opacity:0;
+        transform:translate(var(--x),var(--y)) scale(1.3) rotate(var(--r));
+    }
+}
 
-    .logo{
-        font-size:18px;
+/* MOBILE */
+
+@media(max-width:850px){
+
+    nav{
+        width:92%;
     }
 
     .nav-links{
@@ -900,90 +848,98 @@ footer span{
     .hero{
         grid-template-columns:1fr;
         text-align:center;
-        padding-top:140px;
-        gap:55px;
+        gap:50px;
+        padding-top:130px;
     }
 
-    .hero-text p{
-        margin:auto;
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .hero-buttons{
         justify-content:center;
     }
 
-    .hero-photo img{
-        width:270px;
-        height:340px;
+    .hero-photo{
+        order:-1;
     }
 
-    .hero-photo::before{
-        width:285px;
-        height:345px;
-    }
-
-    section{
-        padding-top:85px;
+    .photo-frame{
+        width:290px;
     }
 
     .about-grid,
-    .edu-card,
-    .project-showcase{
+    .project-card{
         grid-template-columns:1fr;
     }
 
-    .about-photo img{
-        height:390px;
+    .about-image img{
+        height:360px;
     }
 
     .skills-grid,
-    .hobbies-grid{
-        grid-template-columns:1fr 1fr;
+    .hobby-grid,
+    .testimonial-grid{
+        grid-template-columns:1fr;
     }
 
-    .project-image{
-        min-height:300px;
-    }
-
-    .project-info{
-        padding:32px 25px;
-    }
-
-    .music-card{
+    .music-box{
         grid-template-columns:1fr;
         text-align:center;
     }
 
-    .music-disc{
+    .music-icon{
         margin:auto;
     }
-}
 
-@media(max-width:520px){
-
-    .hero-text h1{
-        font-size:55px;
+    .project-image{
+        min-height:330px;
     }
 
-    .skills-grid,
-    .hobbies-grid{
-        grid-template-columns:1fr;
+    .project-content{
+        padding:32px 25px;
     }
 
-    .hobby-img{
-        height:300px;
+    .project-content h3{
+        font-size:45px;
     }
 
     .contact-box{
         padding:35px 20px;
     }
 
-    .project-info h3{
-        font-size:31px;
+    .contact-box h2{
+        font-size:44px;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:80px 0 35px;
+    }
+
+    .hero h1{
+        font-size:64px;
     }
 
     .section-title h2{
-        font-size:38px;
+        font-size:48px;
+    }
+
+    .about-content{
+        padding:27px 22px;
+    }
+
+    .memory-grid{
+        columns:2 130px;
+        column-gap:10px;
+    }
+
+    .memory-item{
+        margin-bottom:10px;
+        border-radius:16px;
     }
 }
 </style>
@@ -991,114 +947,141 @@ footer span{
 
 <body>
 
-<!-- DECOR -->
-<div class="decor one">✿</div>
-<div class="decor two">♡</div>
-<div class="decor three">✦</div>
-<div class="decor four">🌷</div>
+<div class="decor d1">✿</div>
+<div class="decor d2">♡</div>
+<div class="decor d3">✦</div>
+<div class="decor d4">🌷</div>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Aurelliee <span>♡</span></div>
+
+<nav>
+    <a href="#home" class="logo">Aurelliee <span>♡</span></a>
 
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Karya</a></li>
         <li><a href="#memories">Memories</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 
 <!-- HOME -->
-<section class="hero" id="home">
+
+<header class="hero" id="home">
 
     <div class="hero-text reveal">
 
-        <div class="small">welcome to my little corner ♡</div>
+        <div class="small-label">
+            ✦ STUDENT PORTFOLIO
+        </div>
 
         <h1>
-            Della
-            <span>Aurellia</span>
+            Hi, I'm
+            <span>Aurel ♡</span>
         </h1>
 
-        <p>
-            Hi, I'm <strong>Aurel</strong> ♡
-            Seorang pelajar dari SMKN 42 Jakarta yang suka mencoba
-            hal baru, membuat sesuatu, dan menyimpan cerita kecil
-            dalam bentuk karya maupun kenangan.
+        <p class="hero-description">
+            Selamat datang di little corner milikku.
+            Sebuah tempat kecil untuk mengenal aku,
+            melihat karya, menyimpan memories,
+            dan berbagi sedikit cerita tentang perjalanan belajarku.
         </p>
 
         <div class="hero-buttons">
-            <a href="#about" class="btn primary">
-                Kenalan yuk <i class="fa-solid fa-arrow-down"></i>
+
+            <a href="#about" class="btn btn-primary">
+                Kenalan yuk
+                <i class="fa-solid fa-heart"></i>
             </a>
 
-            <a href="#projects" class="btn">
-                Lihat karya <i class="fa-solid fa-sparkles"></i>
+            <a href="#projects" class="btn btn-secondary">
+                Lihat karya
+                <i class="fa-solid fa-arrow-down"></i>
             </a>
+
         </div>
 
     </div>
 
+
     <div class="hero-photo reveal">
-        <img src="profil, profil hero, sekolah, karya/profil.jpg" alt="Foto Aurel">
+
+        <div class="flower one">✿</div>
+
+        <div class="photo-frame">
+            <img
+                src="profil, profil hero, sekolah, karya/profil.jpg"
+                alt="Foto Della Aurellia">
+        </div>
+
+        <div class="photo-sticker">
+            Della Aurellia · Aurel
+        </div>
+
+        <div class="flower two">♡</div>
+
     </div>
 
-</section>
+</header>
 
 
-<!-- ABOUT -->
+<!-- ABOUT ME -->
+
 <section id="about">
 
     <div class="section-title reveal">
-        <div class="mini">a little story</div>
-        <h2>Little <em>About Me</em></h2>
+
+        <div class="mini">get to know me</div>
+
+        <h2>Little About Me</h2>
+
         <p>
-            Sedikit tentang siapa aku, apa yang sedang aku pelajari,
-            dan hal-hal kecil yang membuat website ini terasa seperti rumah.
+            Sedikit cerita tentang siapa aku, apa yang sedang
+            kupelajari, dan hal-hal kecil yang membuatku terus berkembang.
         </p>
+
     </div>
 
     <div class="about-grid">
 
-        <div class="about-photo reveal">
-            <img src="profil, profil hero, sekolah, karya/foto profil hero.jpeg" alt="Aurel">
-            <div class="tag">anak 42 ♡</div>
+        <div class="about-image reveal">
+
+            <img
+                src="profil, profil hero, sekolah, karya/foto profil hero.jpeg"
+                alt="Aurel">
+
         </div>
 
-        <div class="about-card reveal">
+        <div class="about-content card reveal">
 
-            <h3>Haiii! Aku Aurel ♡</h3>
+            <h3>Haiii, aku Aurel ♡</h3>
 
             <p>
-                Saya adalah siswa yang <span class="highlight">aktif,
-                kreatif, dan pantang menyerah</span> dalam menghadapi
-                berbagai masalah serta mencoba hal baru.
+                Nama lengkapku
+                <span class="highlight">Della Aurellia</span>,
+                tapi kalian bisa memanggilku Aurel.
+                Aku adalah pelajar dari
+                <span class="highlight">SMKN 42 Jakarta</span>,
+                kelas
+                <span class="highlight">X Manajemen Perkantoran 1</span>.
             </p>
 
             <p>
-                Saat ini saya merupakan pelajar
-                <span class="highlight">SMK Negeri 42 Jakarta</span>,
-                kelas X Manajemen Perkantoran 1.
+                Saya adalah siswa yang aktif, kreatif, dan pantang
+                menyerah dalam menghadapi berbagai masalah serta
+                mencoba hal baru.
             </p>
 
             <p>
-                Saya suka menghabiskan waktu untuk hal yang bermanfaat,
-                mulai dari menulis, bernyanyi, menonton film,
-                membuat desain, sampai belajar sesuatu yang sebelumnya
-                belum saya mengerti.
-            </p>
-
-            <p>
-                Website ini menjadi salah satu tempat untuk menyimpan
-                cerita, karya, kesukaan, dan perjalanan kecil saya
-                sebagai seorang pelajar.
+                Aku suka menghabiskan waktu untuk hal yang bermanfaat
+                dan sekarang sedang belajar memahami sesuatu yang
+                belum aku mengerti.
             </p>
 
         </div>
@@ -1108,29 +1091,45 @@ footer span{
 </section>
 
 
-<!-- MUSIC -->
+<!-- MUSIC
+     INI TEPAT SETELAH ABOUT ME -->
+
 <section id="music">
 
     <div class="section-title reveal">
-        <div class="mini">currently playing</div>
-        <h2>A song for <em>today ♡</em></h2>
+
+        <div class="mini">a little soundtrack</div>
+
+        <h2>My Current Music ♫</h2>
+
+        <p>
+            Karena beberapa cerita terasa lebih indah
+            kalau ditemani musik.
+        </p>
+
     </div>
 
-    <div class="music-card reveal">
+    <div class="music-box reveal">
 
-        <div class="music-disc">
+        <div class="music-icon">
             <i class="fa-solid fa-music"></i>
         </div>
 
         <div class="music-info">
-            <div class="label">my little playlist</div>
 
             <h3>Hate That I Made You Love Me</h3>
 
-            <audio controls preload="metadata">
-                <source src="hate that i made you love me mp3.mp3" type="audio/mpeg">
-                Browser kamu belum mendukung audio.
+            <p>
+                One of the songs currently living in my playlist ♡
+            </p>
+
+            <audio controls>
+                <source
+                    src="hate that i made you love me mp3.mp3"
+                    type="audio/mpeg">
+                Browser kamu tidak mendukung audio.
             </audio>
+
         </div>
 
     </div>
@@ -1139,32 +1138,42 @@ footer span{
 
 
 <!-- EDUCATION -->
+
 <section id="education">
 
     <div class="section-title reveal">
+
         <div class="mini">my journey</div>
-        <h2>My <em>Education</em></h2>
+
+        <h2>Education</h2>
+
+        <p>
+            Tempat aku memulai perjalanan baru,
+            belajar, mencoba, dan bertumbuh.
+        </p>
+
     </div>
 
-    <div class="edu-card reveal">
+    <div class="education-card card reveal">
 
-        <img src="profil, profil hero, sekolah, karya/smkn 42.jpeg" alt="SMKN 42 Jakarta">
-
-        <div class="edu-content">
-
-            <span class="year">2026 — sekarang</span>
-
-            <h3>SMK Negeri 42 Jakarta</h3>
-
-            <h4>X Manajemen Perkantoran 1</h4>
-
-            <p>
-                Tempat saya belajar, berkembang, bertemu banyak orang,
-                mencoba berbagai hal baru, dan membangun pengalaman
-                untuk perjalanan saya ke depan.
-            </p>
-
+        <div class="edu-icon">
+            <i class="fa-solid fa-school"></i>
         </div>
+
+        <h3>SMK Negeri 42 Jakarta</h3>
+
+        <div class="edu-meta">
+            <span class="pill">2026 — sekarang</span>
+            <span class="pill">Manajemen Perkantoran</span>
+            <span class="pill">X MP 1</span>
+        </div>
+
+        <p>
+            Menjadi bagian dari SMKN 42 Jakarta adalah awal dari
+            perjalanan baru untuk mengenal dunia kerja,
+            mengembangkan keterampilan, dan terus belajar
+            menjadi versi diriku yang lebih baik.
+        </p>
 
     </div>
 
@@ -1172,55 +1181,58 @@ footer span{
 
 
 <!-- SKILLS -->
+
 <section id="skills">
 
     <div class="section-title reveal">
+
         <div class="mini">things i can do</div>
-        <h2>My <em>Skills</em></h2>
+
+        <h2>My Skills</h2>
+
+        <p>
+            Beberapa kemampuan yang sedang aku gunakan
+            dan terus aku kembangkan.
+        </p>
+
     </div>
 
     <div class="skills-grid">
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-pen"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-pen-nib"></i>
             <h3>Writing</h3>
+            <p>Menuangkan ide lewat tulisan.</p>
         </div>
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-palette"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-palette"></i>
             <h3>Canva / Design</h3>
+            <p>Membuat desain visual yang menarik.</p>
         </div>
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-code"></i>
             <h3>HTML / CSS</h3>
+            <p>Membangun dan menghias website.</p>
         </div>
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-microphone"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-microphone"></i>
             <h3>Singing</h3>
+            <p>Menyalurkan ekspresi lewat suara.</p>
         </div>
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-mobile-screen"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-mobile-screen-button"></i>
             <h3>Editing</h3>
+            <p>Mengedit konten dan visual.</p>
         </div>
 
-        <div class="skill-card reveal">
-            <div class="skill-icon">
-                <i class="fa-solid fa-comments"></i>
-            </div>
+        <div class="skill-card card reveal">
+            <i class="fa-solid fa-comments"></i>
             <h3>Public Speaking</h3>
+            <p>Belajar berbicara dengan percaya diri.</p>
         </div>
 
     </div>
@@ -1229,56 +1241,70 @@ footer span{
 
 
 <!-- HOBBIES -->
+
 <section id="hobbies">
 
     <div class="section-title reveal">
-        <div class="mini">things i love</div>
-        <h2>My <em>Hobbies</em></h2>
+
+        <div class="mini">when i'm not studying</div>
+
+        <h2>My Hobbies</h2>
+
         <p>
-            Beberapa hal sederhana yang biasanya membuat waktu luang
-            jadi lebih menyenangkan.
+            Hal-hal sederhana yang biasanya aku lakukan
+            ketika punya waktu luang.
         </p>
+
     </div>
 
-    <div class="hobbies-grid">
+    <div class="hobby-grid">
 
-        <article class="hobby-card reveal">
+        <article class="hobby-card card reveal">
 
             <div class="hobby-img">
-                <img src="hobi/hobi nulis.jpeg" alt="Writing">
+                <img src="hobi/hobi nulis.jpeg" alt="Hobi menulis">
             </div>
 
             <div class="hobby-info">
-                <div class="number">01 — HOBBY</div>
                 <h3>Writing ✍🏻</h3>
+                <p>
+                    Menulis menjadi salah satu caraku menuangkan
+                    pikiran, ide, dan cerita.
+                </p>
             </div>
 
         </article>
 
 
-        <article class="hobby-card reveal">
+        <article class="hobby-card card reveal">
 
             <div class="hobby-img">
-                <img src="hobi/hobi nyanyi.jpeg" alt="Singing">
+                <img src="hobi/hobi nyanyi.jpeg" alt="Hobi bernyanyi">
             </div>
 
             <div class="hobby-info">
-                <div class="number">02 — HOBBY</div>
                 <h3>Singing 🎤</h3>
+                <p>
+                    Bernyanyi adalah salah satu hal yang membuat
+                    waktu luang terasa lebih menyenangkan.
+                </p>
             </div>
 
         </article>
 
 
-        <article class="hobby-card reveal">
+        <article class="hobby-card card reveal">
 
             <div class="hobby-img">
-                <img src="hobi/hobi nonton.jpeg" alt="Watching Movies">
+                <img src="hobi/hobi nonton.jpeg" alt="Hobi menonton">
             </div>
 
             <div class="hobby-info">
-                <div class="number">03 — HOBBY</div>
                 <h3>Watching Movies 🎬</h3>
+                <p>
+                    Menonton film untuk menikmati cerita,
+                    mencari hiburan, dan melihat perspektif baru.
+                </p>
             </div>
 
         </article>
@@ -1289,52 +1315,66 @@ footer span{
 
 
 <!-- PROJECT -->
+
 <section id="projects">
 
     <div class="section-title reveal">
+
         <div class="mini">something i created</div>
-        <h2>My <em>Project</em></h2>
+
+        <h2>My Project</h2>
+
         <p>
-            Salah satu karya yang menjadi bukti bahwa saya berani
-            mencoba sesuatu yang baru.
+            Salah satu hasil percobaan yang menjadi bagian
+            dari proses belajarku.
         </p>
+
     </div>
 
-    <div class="project-showcase reveal">
+    <div class="project-card card reveal">
 
         <div class="project-image">
-            <img src="profil, profil hero, sekolah, karya/karya.png" alt="Website Aurelliee">
+            <img
+                src="profil, profil hero, sekolah, karya/karya.png"
+                alt="Website Aurelliee">
         </div>
 
-        <div class="project-info">
+        <div class="project-content">
 
-            <div class="eyebrow">personal website</div>
-
-            <h3>Website Aurelliee ♡</h3>
-
-            <p>
-                Website ini adalah keberhasilan dari percobaan pertama saya.
-                Saya membuatnya sebagai tempat untuk memperkenalkan diri,
-                menyimpan cerita, menampilkan karya, dan belajar membuat
-                website menggunakan HTML dan CSS.
-            </p>
-
-            <div class="project-pills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Web Design</span>
-                <span>Personal Project</span>
+            <div class="project-number">
+                01 · FIRST WEBSITE
             </div>
 
-            <a
-                href="https://dellaaurellia878-spec.github.io/Aurelliee05"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn primary"
-            >
-                Lihat Website
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+            <h3>Website Aurelliee</h3>
+
+            <p>
+                Website ini adalah keberhasilan dari percobaan
+                pertama saya. Dari project ini aku belajar bagaimana
+                menyusun halaman website, menggunakan HTML dan CSS,
+                serta membuat tampilan sesuai konsep yang aku mau.
+            </p>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Responsive</span>
+                <span>GitHub Pages</span>
+            </div>
+
+            <div>
+
+                <a
+                    href="https://dellaaurellia878-spec.github.io/Aurelliee05"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+
+                    Lihat Website
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -1344,55 +1384,61 @@ footer span{
 
 
 <!-- MEMORIES -->
+
 <section id="memories">
 
     <div class="section-title reveal">
-        <div class="mini">little pieces of time</div>
-        <h2>My <em>Memories</em></h2>
+
+        <div class="mini">little moments</div>
+
+        <h2>Memories ♡</h2>
+
         <p>
-            Beberapa potongan kecil yang ingin tetap saya simpan.
+            Potongan-potongan kecil yang ingin aku simpan
+            sebagai bagian dari perjalanan.
         </p>
+
     </div>
 
-    <div class="memories-grid">
+    <div class="memory-grid reveal">
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/1.jpg" alt="Memory 1">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/2.jpg" alt="Memory 2">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/3.jpg" alt="Memory 3">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/4.jpg" alt="Memory 4">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/5.jpg" alt="Memory 5">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/6.jpg" alt="Memory 6">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/7.jpg" alt="Memory 7">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/8.jpg" alt="Memory 8">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/9.jpg" alt="Memory 9">
         </div>
 
-        <div class="memory reveal">
+        <div class="memory-item">
             <img src="memories/10.jpg" alt="Memory 10">
         </div>
 
@@ -1401,67 +1447,96 @@ footer span{
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- TESTIMONI -->
+
+<section id="testimoni">
 
     <div class="section-title reveal">
-        <div class="mini">let's connect</div>
-        <h2>Find me <em>here ♡</em></h2>
-    </div>
 
-    <div class="contact-box reveal">
+        <div class="mini">little words</div>
 
-        <h3>Say hiiii! 🌷</h3>
+        <h2>Testimoni & Kesan ♡</h2>
 
         <p>
-            Kalau mau berkunjung, ngobrol, atau sekadar melihat
-            hal-hal yang saya bagikan, kamu bisa menemukan saya
-            lewat beberapa platform di bawah ini.
+            Kesan yang menggambarkan website ini:
+            personal, hangat, dan penuh proses.
         </p>
 
-        <div class="socials">
+    </div>
 
-            <a
-                class="social"
-                href="https://www.instagram.com/bbvterfliee._/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                title="Instagram"
-            >
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+    <div class="testimonial-grid">
 
-            <a
-                class="social"
-                href="https://www.tiktok.com/@aurelliaaaaaaa._"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                title="TikTok"
-            >
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
+        <div class="testimonial card reveal">
 
-            <a
-                class="social"
-                href="https://wa.me/6285709980651"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                title="WhatsApp"
-            >
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+            <div class="quote">“</div>
 
-            <a
-                class="social"
-                href="mailto:dellaaurellia878@gmail.com"
-                aria-label="Email"
-                title="Email"
-            >
-                <i class="fa-solid fa-envelope"></i>
-            </a>
+            <p>
+                Website ini terasa personal dan punya karakter
+                yang kuat dari setiap bagian yang ditampilkan.
+            </p>
+
+            <div class="testimonial-author">
+
+                <div class="author-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="author-text">
+                    <strong>Kesan Pengunjung</strong>
+                    <span>about the website</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="testimonial card reveal">
+
+            <div class="quote">“</div>
+
+            <p>
+                Tampilan yang lembut membuat karya dan memories
+                di dalamnya terasa nyaman untuk dilihat.
+            </p>
+
+            <div class="testimonial-author">
+
+                <div class="author-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div class="author-text">
+                    <strong>Kesan Pengunjung</strong>
+                    <span>about the design</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="testimonial card reveal">
+
+            <div class="quote">“</div>
+
+            <p>
+                Terlihat proses belajar dan keberanian untuk
+                mencoba hal baru dalam membuat website ini.
+            </p>
+
+            <div class="testimonial-author">
+
+                <div class="author-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+                <div class="author-text">
+                    <strong>Kesan Pengunjung</strong>
+                    <span>about the journey</span>
+                </div>
+
+            </div>
 
         </div>
 
@@ -1470,141 +1545,263 @@ footer span{
 </section>
 
 
-<!-- SURPRISE -->
-<section class="surprise">
+<!-- CONTACT -->
 
-    <div class="surprise-card reveal">
+<section id="contact">
 
-        <h2>Pesan untuk pembaca ♡</h2>
+    <div class="contact-box card reveal">
 
-        <p>
-            Terima kasih sudah mampir ke little corner milikku.
-            Semoga kamu menemukan sesuatu yang menyenangkan di sini 🌷
+        <div class="section-title" style="margin-bottom:0">
+
+            <div class="mini">let's connect</div>
+
+            <h2>Find Me Here ♡</h2>
+
+            <p>
+                Kalau ingin melihat lebih banyak tentang aku,
+                kamu bisa menemukanku melalui beberapa platform berikut.
+            </p>
+
+        </div>
+
+        <div class="socials">
+
+            <a
+                class="social"
+                href="https://www.instagram.com/bbvterfliee._/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+                class="social"
+                href="https://www.tiktok.com/@aurelliaaaaaaa._"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a
+                class="social"
+                href="https://wa.me/6285709980651"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a
+                class="social"
+                href="mailto:dellaaurellia878@gmail.com"
+                aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <p class="contact-note">
+            Instagram · TikTok · WhatsApp · Email
         </p>
-
-        <button class="explode-btn" onclick="explodeEmojis()">
-            Pesan untuk pembaca ✨
-        </button>
 
     </div>
 
 </section>
 
 
+<!-- PESAN UNTUK PEMBACA -->
+
+<div class="surprise reveal">
+
+    <h2>Before you go... ♡</h2>
+
+    <p>
+        Ada sedikit pesan kecil buat kamu yang sudah sampai di sini.
+    </p>
+
+    <button class="btn btn-primary" id="surpriseBtn">
+
+        Pesan untuk pembaca
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+    </button>
+
+</div>
+
+
 <!-- FOOTER -->
+
 <footer>
-    <span>(2026) by Aurel</span> ♡
+    Made with <span class="heart">♡</span> by Aurel · 2026
 </footer>
 
 
 <script>
 
-/* SCROLL REVEAL */
-const reveals = document.querySelectorAll(".reveal");
+/* REVEAL */
 
-const observer = new IntersectionObserver((entries)=>{
+const revealElements=document.querySelectorAll('.reveal');
+
+const observer=new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
-            entry.target.classList.add("show");
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
         }
     });
 },{
     threshold:.12
 });
 
-reveals.forEach(item=>observer.observe(item));
+revealElements.forEach(el=>observer.observe(el));
 
 
 /* EMOJI EXPLOSION */
-function explodeEmojis(){
 
-    const emojis = [
-        "💖","✨","🌸","🌷","💗",
-        "♡","✦","🎀","🩷","💐",
-        "⭐","💕","🦋"
-    ];
+const surpriseBtn=document.getElementById('surpriseBtn');
 
-    const button = document.querySelector(".explode-btn");
-    const rect = button.getBoundingClientRect();
+const emojis=[
+    '💖','✨','🌸','💗','🌷',
+    '💕','⭐','🎀','♡','✦'
+];
 
-    for(let i=0;i<35;i++){
+surpriseBtn.addEventListener('click',()=>{
 
-        const emoji = document.createElement("div");
+    const rect=surpriseBtn.getBoundingClientRect();
 
-        emoji.className = "emoji";
-        emoji.textContent =
+    const centerX=rect.left+rect.width/2;
+    const centerY=rect.top+rect.height/2;
+
+    for(let i=0;i<30;i++){
+
+        const emoji=document.createElement('span');
+
+        emoji.className='explosion';
+
+        emoji.textContent=
             emojis[Math.floor(Math.random()*emojis.length)];
 
-        emoji.style.left =
-            (rect.left + rect.width/2) + "px";
+        emoji.style.left=centerX+'px';
+        emoji.style.top=centerY+'px';
 
-        emoji.style.top =
-            (rect.top + rect.height/2) + "px";
+        const angle=Math.random()*Math.PI*2;
+        const distance=80+Math.random()*180;
 
-        const x =
-            (Math.random() - .5) * 500;
+        emoji.style.setProperty(
+            '--x',
+            `${Math.cos(angle)*distance}px`
+        );
 
-        const y =
-            (Math.random() - .5) * 420 - 80;
+        emoji.style.setProperty(
+            '--y',
+            `${Math.sin(angle)*distance}px`
+        );
 
-        emoji.style.setProperty("--x",x+"px");
-        emoji.style.setProperty("--y",y+"px");
-
-        emoji.style.fontSize =
-            (18 + Math.random()*18) + "px";
+        emoji.style.setProperty(
+            '--r',
+            `${Math.random()*360-180}deg`
+        );
 
         document.body.appendChild(emoji);
 
         setTimeout(()=>{
             emoji.remove();
-        },1500);
-    }
-}
-
-
-/* SMALL CLICK SPARKLE */
-document.addEventListener("click",(e)=>{
-
-    if(e.target.closest("button") || e.target.closest("a")){
-        return;
+        },1100);
     }
 
-    const sparkle = document.createElement("span");
+    const original=surpriseBtn.innerHTML;
 
-    sparkle.textContent = "✦";
-    sparkle.style.position = "fixed";
-    sparkle.style.left = e.clientX + "px";
-    sparkle.style.top = e.clientY + "px";
-    sparkle.style.pointerEvents = "none";
-    sparkle.style.zIndex = "9999";
-    sparkle.style.color = "#d387a2";
-    sparkle.style.fontSize = "18px";
-    sparkle.style.animation = "sparkleClick .8s ease forwards";
+    surpriseBtn.innerHTML=
+        'Thank you for visiting ♡ <i class="fa-solid fa-heart"></i>';
+
+    setTimeout(()=>{
+        surpriseBtn.innerHTML=original;
+    },2500);
+
+});
+
+
+/* CLICK SPARKLE */
+
+document.addEventListener('click',(e)=>{
+
+    if(e.target.closest('a,button,audio')) return;
+
+    const sparkle=document.createElement('span');
+
+    sparkle.className='explosion';
+    sparkle.textContent='✦';
+
+    sparkle.style.left=e.clientX+'px';
+    sparkle.style.top=e.clientY+'px';
+
+    sparkle.style.setProperty(
+        '--x',
+        `${Math.random()*50-25}px`
+    );
+
+    sparkle.style.setProperty(
+        '--y',
+        `${Math.random()*50-25}px`
+    );
+
+    sparkle.style.setProperty(
+        '--r',
+        `${Math.random()*180}deg`
+    );
 
     document.body.appendChild(sparkle);
 
     setTimeout(()=>{
         sparkle.remove();
-    },800);
+    },900);
+
 });
 
 
-const sparkleStyle = document.createElement("style");
+/* MEMORY LIGHTBOX */
 
-sparkleStyle.innerHTML = `
-@keyframes sparkleClick{
-    0%{
-        opacity:1;
-        transform:scale(.5) rotate(0deg);
-    }
-    100%{
-        opacity:0;
-        transform:translateY(-25px) scale(1.5) rotate(180deg);
-    }
-}
-`;
+document.querySelectorAll('.memory-item').forEach(item=>{
 
-document.head.appendChild(sparkleStyle);
+    item.addEventListener('click',()=>{
+
+        const img=item.querySelector('img');
+
+        const overlay=document.createElement('div');
+
+        overlay.style.position='fixed';
+        overlay.style.inset='0';
+        overlay.style.background='rgba(75,45,58,.72)';
+        overlay.style.backdropFilter='blur(8px)';
+        overlay.style.zIndex='9998';
+        overlay.style.display='flex';
+        overlay.style.alignItems='center';
+        overlay.style.justifyContent='center';
+        overlay.style.padding='25px';
+        overlay.style.cursor='zoom-out';
+
+        const bigImg=document.createElement('img');
+
+        bigImg.src=img.src;
+
+        bigImg.style.maxWidth='90%';
+        bigImg.style.maxHeight='90%';
+        bigImg.style.objectFit='contain';
+        bigImg.style.borderRadius='25px';
+        bigImg.style.boxShadow='0 30px 70px rgba(0,0,0,.3)';
+
+        overlay.appendChild(bigImg);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click',()=>{
+            overlay.remove();
+        });
+
+    });
+
+});
 
 </script>
 
